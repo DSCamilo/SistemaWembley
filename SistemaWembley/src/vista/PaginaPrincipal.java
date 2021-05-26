@@ -43,11 +43,12 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 427, Short.MAX_VALUE)
+            .addGap(0, 382, Short.MAX_VALUE)
         );
 
         getContentPane().add(jDesktopPane1);
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/login.png"))); // NOI18N
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
