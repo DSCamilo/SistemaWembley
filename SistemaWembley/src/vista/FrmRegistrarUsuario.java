@@ -125,7 +125,7 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
                                         .addGap(44, 44, 44)
                                         .addComponent(btn_CancelarRegistroUsuario_)
                                         .addGap(0, 0, Short.MAX_VALUE)))))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +158,7 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_RegistrarUsuario_)
                     .addComponent(btn_CancelarRegistroUsuario_))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
