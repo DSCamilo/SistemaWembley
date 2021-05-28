@@ -134,7 +134,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Pta_Productos_adm_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_adm_ActionPerformed
-        // TODO add your handling code here:
+      FrmAgregarProducto IU_RegistrarProducto = new FrmAgregarProducto();
+      IU_Pricipal.add(IU_RegistrarProducto);
+      IU_RegistrarProducto.show();
     }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
 
     private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
