@@ -27,33 +27,35 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        IU_Pricipal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        Menu_Prin_Adm = new javax.swing.JMenu();
+        Pta_Registrar_Usuario_ = new javax.swing.JMenuItem();
+        Pta_Productos_adm_ = new javax.swing.JMenuItem();
+        Pta_Generar_Informes_ = new javax.swing.JMenuItem();
+        Pta_Proveedores = new javax.swing.JMenuItem();
+        Menu_Prin_Usr = new javax.swing.JMenu();
+        Pta_Productos_usr_ = new javax.swing.JMenuItem();
+        Pta_Listar_Horarios_ = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 608, Short.MAX_VALUE)
+        javax.swing.GroupLayout IU_PricipalLayout = new javax.swing.GroupLayout(IU_Pricipal);
+        IU_Pricipal.setLayout(IU_PricipalLayout);
+        IU_PricipalLayout.setHorizontalGroup(
+            IU_PricipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 694, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 382, Short.MAX_VALUE)
+        IU_PricipalLayout.setVerticalGroup(
+            IU_PricipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 482, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jDesktopPane1);
+        getContentPane().add(IU_Pricipal);
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/login.png"))); // NOI18N
         jMenu1.setText("File");
@@ -63,40 +65,64 @@ public class PaginaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/administracion.png"))); // NOI18N
-        jMenu2.setText("Administrador");
+        Menu_Prin_Adm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/administracion.png"))); // NOI18N
+        Menu_Prin_Adm.setText("Administrador");
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/registrar usuario.png"))); // NOI18N
-        jMenuItem2.setText("Registrar usuario");
-        jMenu2.add(jMenuItem2);
-
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/productos.png"))); // NOI18N
-        jMenuItem3.setText("Productos");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        Pta_Registrar_Usuario_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/registrar usuario.png"))); // NOI18N
+        Pta_Registrar_Usuario_.setText("Registrar usuario");
+        Pta_Registrar_Usuario_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                Pta_Registrar_Usuario_ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        Menu_Prin_Adm.add(Pta_Registrar_Usuario_);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/generarinformes.png"))); // NOI18N
-        jMenuItem4.setText("Generar informes");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        Pta_Productos_adm_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/productos.png"))); // NOI18N
+        Pta_Productos_adm_.setText("Productos");
+        Pta_Productos_adm_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                Pta_Productos_adm_ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        Menu_Prin_Adm.add(Pta_Productos_adm_);
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/proveedores.png"))); // NOI18N
-        jMenuItem5.setText("Proveedores");
-        jMenu2.add(jMenuItem5);
+        Pta_Generar_Informes_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/generarinformes.png"))); // NOI18N
+        Pta_Generar_Informes_.setText("Generar informes");
+        Pta_Generar_Informes_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pta_Generar_Informes_ActionPerformed(evt);
+            }
+        });
+        Menu_Prin_Adm.add(Pta_Generar_Informes_);
 
-        jMenuBar1.add(jMenu2);
+        Pta_Proveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/proveedores.png"))); // NOI18N
+        Pta_Proveedores.setText("Proveedores");
+        Pta_Proveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pta_ProveedoresActionPerformed(evt);
+            }
+        });
+        Menu_Prin_Adm.add(Pta_Proveedores);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/empleado.png"))); // NOI18N
-        jMenu3.setText("Vendedor");
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(Menu_Prin_Adm);
+
+        Menu_Prin_Usr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/empleado.png"))); // NOI18N
+        Menu_Prin_Usr.setText("Vendedor");
+
+        Pta_Productos_usr_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/productos.png"))); // NOI18N
+        Pta_Productos_usr_.setText("Productos");
+        Pta_Productos_usr_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pta_Productos_usr_ActionPerformed(evt);
+            }
+        });
+        Menu_Prin_Usr.add(Pta_Productos_usr_);
+
+        Pta_Listar_Horarios_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/calendario.png"))); // NOI18N
+        Pta_Listar_Horarios_.setText("Listar Horarios");
+        Menu_Prin_Usr.add(Pta_Listar_Horarios_);
+
+        jMenuBar1.add(Menu_Prin_Usr);
 
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/support.png"))); // NOI18N
         jMenu4.setText("Ayuda");
@@ -107,13 +133,29 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void Pta_Productos_adm_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_adm_ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
+
+    private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
+
+    private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed
+        FrmRegistrarUsuario IU_RegistrarUsuario = new FrmRegistrarUsuario();
+        IU_Pricipal.add(IU_RegistrarUsuario);
+        IU_RegistrarUsuario.setVisible(true);
+    }//GEN-LAST:event_Pta_Registrar_Usuario_ActionPerformed
+
+    private void Pta_ProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_ProveedoresActionPerformed
+       FrmAgregarProveedor IU_AgregarProveedor = new FrmAgregarProveedor();
+        IU_Pricipal.add(IU_AgregarProveedor);
+        IU_AgregarProveedor.show();
+    }//GEN-LAST:event_Pta_ProveedoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,16 +193,18 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JDesktopPane IU_Pricipal;
+    private javax.swing.JMenu Menu_Prin_Adm;
+    private javax.swing.JMenu Menu_Prin_Usr;
+    private javax.swing.JMenuItem Pta_Generar_Informes_;
+    private javax.swing.JMenuItem Pta_Listar_Horarios_;
+    private javax.swing.JMenuItem Pta_Productos_adm_;
+    private javax.swing.JMenuItem Pta_Productos_usr_;
+    private javax.swing.JMenuItem Pta_Proveedores;
+    private javax.swing.JMenuItem Pta_Registrar_Usuario_;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     // End of variables declaration//GEN-END:variables
 }
