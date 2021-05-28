@@ -23,6 +23,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Buscar productos"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscarProductos_MouseClicked"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>

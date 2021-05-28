@@ -64,6 +64,11 @@ public class IU_Productos extends javax.swing.JInternalFrame {
 
         BuscarProductos_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/buscar produc mod pro.png"))); // NOI18N
         BuscarProductos_.setText("Buscar productos");
+        BuscarProductos_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscarProductos_MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(BuscarProductos_);
 
         setJMenuBar(jMenuBar1);
@@ -80,6 +85,13 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         Desk_ModuloProductos.add(IUAgregarProducto);
         IUAgregarProducto.show();
     }//GEN-LAST:event_AgregarProductos_MouseClicked
+
+    private void BuscarProductos_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarProductos_MouseClicked
+      FrmBuscarProducto IUBuscarProducto = new FrmBuscarProducto();
+      Desk_ModuloProductos.add(IUBuscarProducto);
+      IUBuscarProducto.show();
+      
+    }//GEN-LAST:event_BuscarProductos_MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
