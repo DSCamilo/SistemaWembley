@@ -35,6 +35,11 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jTable1 = new javax.swing.JTable();
         btn_RegistrarVenta_ = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         jTextField1.setText("Ingrese nombre del producto");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

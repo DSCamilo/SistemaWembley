@@ -5,7 +5,7 @@
  */
 package vista;
 
-import vista.PaginaPrincipal;
+
 
 /**
  *
@@ -43,6 +43,11 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
         btn_agregarproveedor_1 = new javax.swing.JButton();
         txt_nombreproducto_ = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/agregar producto 64.png"))); // NOI18N
 

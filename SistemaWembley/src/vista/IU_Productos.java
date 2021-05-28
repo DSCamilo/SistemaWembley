@@ -5,17 +5,23 @@
  */
 package vista;
 
-/**
- *
- * @author Usuario
- */
+import java.awt.Dimension;
+import javax.swing.JFrame;
+
 public class IU_Productos extends javax.swing.JInternalFrame {
 
+    
+    public Dimension dim;
     /**
      * Creates new form IU_Productos
      */
     public IU_Productos() {
         initComponents();
+        
+        dim = super.getToolkit().getScreenSize();
+       super.setSize(dim);
+//        super.setUndecorated(true);
+        super.setVisible(true);
     }
 
     /**
