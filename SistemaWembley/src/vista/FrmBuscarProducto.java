@@ -33,6 +33,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        btn_RegistrarVenta_ = new javax.swing.JButton();
 
         jTextField1.setText("Ingrese nombre del producto");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +68,15 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btn_RegistrarVenta_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_RegistrarVenta_.setText("Registrar venta");
+        btn_RegistrarVenta_.setToolTipText("Registrar Usuario");
+        btn_RegistrarVenta_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_RegistrarVenta_ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -90,6 +100,10 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btn_Buscarproducto_)))))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(238, 238, 238)
+                .addComponent(btn_RegistrarVenta_)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +118,9 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                     .addComponent(btn_Buscarproducto_))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(btn_RegistrarVenta_)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,9 +134,14 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
+    private void btn_RegistrarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarVenta_ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
+    private javax.swing.JButton btn_RegistrarVenta_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
