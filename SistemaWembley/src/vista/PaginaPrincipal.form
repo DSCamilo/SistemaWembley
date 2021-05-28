@@ -136,7 +136,7 @@
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
   <SubComponents>
-    <Container class="javax.swing.JDesktopPane" name="IU_Pricipal">
+    <Container class="javax.swing.JDesktopPane" name="Desk_IU_Principal">
 
       <Layout>
         <DimensionLayout dim="0">

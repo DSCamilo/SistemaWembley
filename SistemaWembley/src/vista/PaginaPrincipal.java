@@ -27,7 +27,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        IU_Pricipal = new javax.swing.JDesktopPane();
+        Desk_IU_Principal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -44,18 +44,18 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        javax.swing.GroupLayout IU_PricipalLayout = new javax.swing.GroupLayout(IU_Pricipal);
-        IU_Pricipal.setLayout(IU_PricipalLayout);
-        IU_PricipalLayout.setHorizontalGroup(
-            IU_PricipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout Desk_IU_PrincipalLayout = new javax.swing.GroupLayout(Desk_IU_Principal);
+        Desk_IU_Principal.setLayout(Desk_IU_PrincipalLayout);
+        Desk_IU_PrincipalLayout.setHorizontalGroup(
+            Desk_IU_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 694, Short.MAX_VALUE)
         );
-        IU_PricipalLayout.setVerticalGroup(
-            IU_PricipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        Desk_IU_PrincipalLayout.setVerticalGroup(
+            Desk_IU_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 482, Short.MAX_VALUE)
         );
 
-        getContentPane().add(IU_Pricipal);
+        getContentPane().add(Desk_IU_Principal);
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/login.png"))); // NOI18N
         jMenu1.setText("File");
@@ -134,9 +134,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Pta_Productos_adm_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_adm_ActionPerformed
-      FrmAgregarProducto IU_RegistrarProducto = new FrmAgregarProducto();
-      IU_Pricipal.add(IU_RegistrarProducto);
-      IU_RegistrarProducto.show();
+      IU_Productos opcionesModProductos = new IU_Productos();
+      Desk_IU_Principal.add(opcionesModProductos);
+      opcionesModProductos.show();
     }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
 
     private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
@@ -145,19 +145,19 @@ public class PaginaPrincipal extends javax.swing.JFrame {
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
        FrmAgregarProducto IU_RegistrarProducto = new FrmAgregarProducto();
-       IU_Pricipal.add(IU_RegistrarProducto);
+       Desk_IU_Principal.add(IU_RegistrarProducto);
        IU_RegistrarProducto.show();
     }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
 
     private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed
         FrmRegistrarUsuario IU_RegistrarUsuario = new FrmRegistrarUsuario();
-        IU_Pricipal.add(IU_RegistrarUsuario);
+        Desk_IU_Principal.add(IU_RegistrarUsuario);
         IU_RegistrarUsuario.setVisible(true);
     }//GEN-LAST:event_Pta_Registrar_Usuario_ActionPerformed
 
     private void Pta_ProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_ProveedoresActionPerformed
        FrmAgregarProveedor IU_AgregarProveedor = new FrmAgregarProveedor();
-        IU_Pricipal.add(IU_AgregarProveedor);
+        Desk_IU_Principal.add(IU_AgregarProveedor);
         IU_AgregarProveedor.show();
     }//GEN-LAST:event_Pta_ProveedoresActionPerformed
 
@@ -197,7 +197,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane IU_Pricipal;
+    private javax.swing.JDesktopPane Desk_IU_Principal;
     private javax.swing.JMenu Menu_Prin_Adm;
     private javax.swing.JMenu Menu_Prin_Usr;
     private javax.swing.JMenuItem Pta_Generar_Informes_;
