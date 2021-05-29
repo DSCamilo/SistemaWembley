@@ -150,9 +150,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
-        FrmAgregarProducto IU_RegistrarProducto = new FrmAgregarProducto();
-        Desk_IU_Principal.add(IU_RegistrarProducto);
-        IU_RegistrarProducto.show();
+        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
+        Desk_IU_Principal.add(IU_BuscarProducto);
+        IU_BuscarProducto.show();
     }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
 
     private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed

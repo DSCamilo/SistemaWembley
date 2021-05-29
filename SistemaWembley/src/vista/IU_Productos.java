@@ -38,6 +38,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         AgregarProductos_ = new javax.swing.JMenu();
         BuscarProductos_ = new javax.swing.JMenu();
 
+        setClosable(true);
         setTitle("Modulo Productos");
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 

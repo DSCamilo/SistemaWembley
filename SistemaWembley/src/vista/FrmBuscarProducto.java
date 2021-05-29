@@ -140,7 +140,9 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
     private void btn_RegistrarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarVenta_ActionPerformed
-        // TODO add your handling code here:
+        FrmRegistrarVenta IU_RegistrarVenta = new FrmRegistrarVenta();
+        IU_RegistrarVenta.show();
+        setVisible(true);
     }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
 
 
