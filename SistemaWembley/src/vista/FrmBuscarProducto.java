@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
-/**
- *
- * @author Usuario
- */
+import vista.IU_Productos;
+import vista.FrmRegistrarVenta;
+
 public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
     /**
@@ -140,9 +134,17 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
     private void btn_RegistrarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarVenta_ActionPerformed
-        FrmRegistrarVenta IU_RegistrarVenta = new FrmRegistrarVenta();
-        IU_RegistrarVenta.show();
-        setVisible(true);
+        IU_Productos win1 = new IU_Productos();
+        FrmRegistrarVenta win2 = new FrmRegistrarVenta();
+        win2.show();
+        win2.setVisible(true);
+        win1.add(win2);
+        win2.show();
+        
+                //win2.show();
+                //       FrmRegistrarVenta IU_RegistrarVenta = new FrmRegistrarVenta();
+                //       
+                //        IU_RegistrarVenta.show();
     }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
 
 

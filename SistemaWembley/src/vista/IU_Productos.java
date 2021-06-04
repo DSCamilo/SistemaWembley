@@ -9,8 +9,10 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 public class IU_Productos extends javax.swing.JInternalFrame {
-
     
+
+
+  
     public Dimension dim;
     /**
      * Creates new form IU_Productos
@@ -23,6 +25,8 @@ public class IU_Productos extends javax.swing.JInternalFrame {
 //        super.setUndecorated(true);
         super.setVisible(true);
     }
+    
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
