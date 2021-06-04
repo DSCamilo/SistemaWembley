@@ -38,7 +38,6 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setTitle("Agregar proveedor");
 
@@ -73,13 +72,6 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/agregarproveedor 64.png"))); // NOI18N
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/cancel32.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,12 +83,10 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel1)
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel8)
-                        .addGap(50, 50, 50))
+                        .addComponent(jLabel8))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(btn_agregarproveedor_)
-                        .addGap(111, 111, 111))
+                        .addComponent(btn_agregarproveedor_))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -115,9 +105,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                                 .addComponent(txt_nombreempresa_, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(cbx_tipodocumento_, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_numerodocumento_proveedor_, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,9 +116,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jLabel8))))
+                        .addComponent(jLabel8)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -157,7 +143,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                             .addComponent(txt_numerodocumento_proveedor_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(41, 41, 41)
                 .addComponent(btn_agregarproveedor_)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         pack();
@@ -167,17 +153,10 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
        JOptionPane.showMessageDialog(null, "Registro exitoso");
     }//GEN-LAST:event_btn_agregarproveedor_ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     
-     
-     
-    }//GEN-LAST:event_jButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_agregarproveedor_;
     private javax.swing.JComboBox<String> cbx_tipodocumento_;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -37,8 +37,12 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setClosable(true);
         setTitle("Consultar proveedor");
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
 
         btn_agregarproveedor_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_agregarproveedor_.setText("Editar");
@@ -121,7 +125,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(btn_agregarproveedor_)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -134,6 +138,10 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
     private void btn_consultarproveedor_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarproveedor_ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_consultarproveedor_ActionPerformed
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
