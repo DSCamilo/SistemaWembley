@@ -25,6 +25,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
        super.setSize(dim);
 //        super.setUndecorated(true);
         super.setVisible(true);
+        Menu_Prin_Usr.setEnabled(false);
 
     }
 
@@ -162,9 +163,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Pta_Registrar_Usuario_ActionPerformed
 
     private void Pta_ProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_ProveedoresActionPerformed
-        FrmAgregarProveedor IU_AgregarProveedor = new FrmAgregarProveedor();
-        Desk_IU_Principal.add(IU_AgregarProveedor);
-        IU_AgregarProveedor.show();
+        IU_Proveedores IU_Proveedores = new IU_Proveedores();
+        Desk_IU_Principal.add(IU_Proveedores);
+        IU_Proveedores.show();
     }//GEN-LAST:event_Pta_ProveedoresActionPerformed
 
     /**
