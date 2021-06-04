@@ -4,8 +4,12 @@ package vista;
 import javax.swing.JOptionPane;
 
 
+
 public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
 
+    
+   
+    
     /**
      * Creates new form FrmAgregarProveedor
      */
@@ -74,6 +78,11 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/agregarproveedor 64.png"))); // NOI18N
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/cancel32.png"))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -91,12 +100,10 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel1)
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel8)
-                        .addGap(50, 50, 50))
+                        .addComponent(jLabel8))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(btn_agregarproveedor_)
-                        .addGap(111, 111, 111))
+                        .addComponent(btn_agregarproveedor_))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -168,10 +175,20 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_agregarproveedor_ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+        
+      //  dispose();
      
      
      
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+      dispose();
+      IU_Proveedores restaurarVentanas = new IU_Proveedores();
+      
+      restaurarVentanas.isVisible();
+    }//GEN-LAST:event_jButton1MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

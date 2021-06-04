@@ -93,6 +93,7 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
         IUAgregarProveedor.show();
         
         AgregarProveedor_.setVisible(false);
+         BuscarProveedor_.setVisible(false);
       
         
     }//GEN-LAST:event_AgregarProveedor_MouseClicked
@@ -102,6 +103,8 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
         Desk_ModuloProveedores.add(IU_ConsultarProveedor);
         IU_ConsultarProveedor.show();
         AgregarProveedor_.setVisible(true);
+        AgregarProveedor_.setVisible(false);
+        BuscarProveedor_.setVisible(false);
  
       
       
