@@ -12,7 +12,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     public IU_AccederSistema() {
         initComponents();
         this.setLocationRelativeTo(null); //Ubicar JFrame en el centro de nuestra pantalla
-        abrirVentana.show();
+        //abrirVentana.show();
     }
     
      public Image getIconImage() {
