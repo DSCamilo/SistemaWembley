@@ -5,16 +5,18 @@
  */
 package vista;
 
+import control.Gestion_usuario;
+
 /**
  *
  * @author Usuario
  */
 public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form FrmRegistrarUsuario
-     */
+   Gestion_usuario conectar;
+   String sql;
     public FrmRegistrarUsuario() {
+        conectar=new Gestion_usuario();
         initComponents();
         setTitle("Registrar Usuario");
     }
@@ -28,19 +30,17 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txt_nombreusuario_ = new javax.swing.JTextField();
-        txt_correoelectronico_ = new javax.swing.JTextField();
-        txt_contraseña_ = new javax.swing.JPasswordField();
-        txt_repetircontraseña_ = new javax.swing.JPasswordField();
+        txtusuarioregistro = new javax.swing.JTextField();
+        txtcontraseñaregistro = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         btn_RegistrarUsuario_ = new javax.swing.JButton();
         btn_CancelarRegistroUsuario_ = new javax.swing.JButton();
+        tipousuario = new javax.swing.JRadioButton();
 
         setTitle("Registrar Usuario");
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
@@ -52,20 +52,16 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
         jLabel1.setText("Registro nuevo usuario");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Nombre:");
+        jLabel2.setText("Usuario");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Contraseña:");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Correo electronico:");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Confirmar contraseña:");
-
-        txt_contraseña_.setText("jPasswordField1");
-
-        txt_repetircontraseña_.setText("jPasswordField1");
+        txtcontraseñaregistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcontraseñaregistroActionPerformed(evt);
+            }
+        });
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/registrar usuario 64.png"))); // NOI18N
 
@@ -87,6 +83,8 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
             }
         });
 
+        tipousuario.setText("Administrador");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -100,32 +98,18 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
                         .addComponent(jLabel6))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(33, 33, 33)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txt_nombreusuario_)
-                                    .addComponent(txt_correoelectronico_)
-                                    .addComponent(txt_contraseña_, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(45, 45, 45)
-                                        .addComponent(btn_RegistrarUsuario_)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txt_repetircontraseña_))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
-                                        .addComponent(btn_CancelarRegistroUsuario_)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(btn_RegistrarUsuario_))
+                        .addGap(76, 76, 76)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_CancelarRegistroUsuario_)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtusuarioregistro)
+                                .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tipousuario))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,27 +122,23 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
                         .addContainerGap()
                         .addComponent(jLabel6)))
                 .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txt_nombreusuario_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4))
-                    .addComponent(txt_correoelectronico_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txt_contraseña_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addComponent(txtusuarioregistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txt_repetircontraseña_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_RegistrarUsuario_)
-                    .addComponent(btn_CancelarRegistroUsuario_))
-                .addContainerGap(73, Short.MAX_VALUE))
+                    .addComponent(jLabel3)
+                    .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(btn_RegistrarUsuario_))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(btn_CancelarRegistroUsuario_)))
+                .addGap(17, 17, 17)
+                .addComponent(tipousuario)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -167,27 +147,37 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_RegistrarUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarUsuario_ActionPerformed
-        // TODO add your handling code here:
+        conectar.conectar();
+        String tipo="vendedor";
+        if ( tipousuario.isSelected()) {
+            tipo="Administrador";
+        }
+       
+        String pass=String.valueOf(txtcontraseñaregistro.getPassword());
+        sql="insert into usuarios (usuario,password,tipo)values('"+txtusuarioregistro.getText()+"','"+pass+"','"+tipo+"')";
+        conectar.registrarusuario(sql);
     }//GEN-LAST:event_btn_RegistrarUsuario_ActionPerformed
 
     private void btn_CancelarRegistroUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelarRegistroUsuario_ActionPerformed
     dispose();
     }//GEN-LAST:event_btn_CancelarRegistroUsuario_ActionPerformed
 
+    private void txtcontraseñaregistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontraseñaregistroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcontraseñaregistroActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_CancelarRegistroUsuario_;
     private javax.swing.JButton btn_RegistrarUsuario_;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txt_contraseña_;
-    private javax.swing.JTextField txt_correoelectronico_;
-    private javax.swing.JTextField txt_nombreusuario_;
-    private javax.swing.JPasswordField txt_repetircontraseña_;
+    private javax.swing.JRadioButton tipousuario;
+    private javax.swing.JPasswordField txtcontraseñaregistro;
+    private javax.swing.JTextField txtusuarioregistro;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,16 +1,20 @@
 
 package vista;
 
+import control.Gestion_usuario;
 import java.awt.Image;
 import java.awt.Toolkit;
 
 
 public class IU_AccederSistema extends javax.swing.JFrame {
         
-   PaginaPrincipal abrirVentana = new PaginaPrincipal();
+  // PaginaPrincipal abrirVentana = new PaginaPrincipal();
    
+     Gestion_usuario conectar;
+     String sql;
     public IU_AccederSistema() {
         initComponents();
+        conectar=new Gestion_usuario();
         this.setLocationRelativeTo(null); //Ubicar JFrame en el centro de nuestra pantalla
         //abrirVentana.show();
     }
@@ -29,9 +33,9 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         jLabelIcono = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextFieldUsuario = new javax.swing.JTextField();
-        jPassword = new javax.swing.JPasswordField();
-        jButtonSesion = new javax.swing.JButton();
+        txtusuarioinicio = new javax.swing.JTextField();
+        btniniciarsesion = new javax.swing.JButton();
+        txtpassinicio = new javax.swing.JPasswordField();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,24 +67,31 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         jLabel3.setText("Contraseña:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
-        jTextFieldUsuario.setBackground(new java.awt.Color(0, 102, 0));
-        jTextFieldUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextFieldUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 200, 30));
+        txtusuarioinicio.setBackground(new java.awt.Color(0, 102, 0));
+        txtusuarioinicio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtusuarioinicio.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(txtusuarioinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 200, 30));
 
-        jPassword.setBackground(new java.awt.Color(0, 102, 51));
-        jPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPassword.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 200, 30));
+        btniniciarsesion.setBackground(new java.awt.Color(0, 204, 0));
+        btniniciarsesion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btniniciarsesion.setForeground(new java.awt.Color(255, 255, 255));
+        btniniciarsesion.setText("Iniciar Sesión");
+        btniniciarsesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btniniciarsesionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btniniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
-        jButtonSesion.setBackground(new java.awt.Color(0, 204, 0));
-        jButtonSesion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButtonSesion.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSesion.setText("Iniciar Sesión");
-        getContentPane().add(jButtonSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
+        txtpassinicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassinicioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtpassinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 200, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/iniciosesionfondo7.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, 460));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 440, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -88,6 +99,17 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtpassinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassinicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpassinicioActionPerformed
+
+    private void btniniciarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btniniciarsesionActionPerformed
+        conectar.conectar();
+          String pass=String.valueOf(txtpassinicio.getPassword());
+          sql="select *  from usuarios where usuario='"+txtusuarioinicio.getText()+"' and password='"+pass+"'";
+      conectar.iniciarsesion(sql);
+    }//GEN-LAST:event_btniniciarsesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,13 +147,13 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btniniciarsesion;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonSesion;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelIcono;
-    private javax.swing.JPasswordField jPassword;
-    private javax.swing.JTextField jTextFieldUsuario;
+    private javax.swing.JPasswordField txtpassinicio;
+    private javax.swing.JTextField txtusuarioinicio;
     // End of variables declaration//GEN-END:variables
 }
