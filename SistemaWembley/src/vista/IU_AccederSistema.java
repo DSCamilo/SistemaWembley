@@ -80,7 +80,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         getContentPane().add(jButtonSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/iniciosesionfondo7.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
