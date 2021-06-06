@@ -7,6 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import vista.IU_AccederSistema;
+import vista.IU_ConsultarProveedor;
+import vista.PaginaPrincipal;
 
 
 public class Gestion_Proveedores {
@@ -14,6 +18,7 @@ public class Gestion_Proveedores {
      Connection conexion;
     Statement sentencia;  //sentencias Query insert,update,delete
     ResultSet consulta;   
+       IU_ConsultarProveedor enviar= new  IU_ConsultarProveedor();
     
     public void conectar(){
     
@@ -44,5 +49,27 @@ public class Gestion_Proveedores {
           }
           
     
+}
+public String [] consultar(String sql){
+      String datos[]=new String[4];
+       String id="",tel="";
+    try {
+              sentencia=conexion.createStatement();
+              consulta=sentencia.executeQuery(sql);
+             
+              while(consulta.next()){
+                  id=String.valueOf(consulta.getInt("id_proveedor"));
+                  tel=String.valueOf(consulta.getString("apellido"));
+                /*  datos[0]=id;
+                  datos[1]=consulta.getString("nombre_e");
+                  datos[2]=tel;
+                  datos[3]=consulta.getString("correo");*/
+                  
+              }
+              
+          } catch (SQLException ex) {
+              JOptionPane.showMessageDialog(null, "Error");
+          }
+    return new String[]{id,tel};
 }
 }

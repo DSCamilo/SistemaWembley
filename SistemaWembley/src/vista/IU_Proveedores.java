@@ -90,8 +90,8 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
 
     private void AgregarProveedor_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgregarProveedor_MouseClicked
        
-        Desk_ModuloProveedores.removeAll();
-         Desk_ModuloProveedores.revalidate();
+     //   Desk_ModuloProveedores.removeAll();
+       //  Desk_ModuloProveedores.revalidate();
         IU_AgregarProveedor IUAgregarProveedor = new IU_AgregarProveedor();
         Desk_ModuloProveedores.add(IUAgregarProveedor);
         IUAgregarProveedor.show();
@@ -102,8 +102,8 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AgregarProveedor_MouseClicked
 
     private void BuscarProveedor_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarProveedor_MouseClicked
-       Desk_ModuloProveedores.removeAll();
-        Desk_ModuloProveedores.revalidate();
+//       Desk_ModuloProveedores.removeAll();
+   //     Desk_ModuloProveedores.revalidate();
         IU_ConsultarProveedor IU_ConsultarProveedor = new IU_ConsultarProveedor();
         Desk_ModuloProveedores.add(IU_ConsultarProveedor);
         IU_ConsultarProveedor.show();
