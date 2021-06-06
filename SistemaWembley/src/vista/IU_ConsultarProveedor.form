@@ -33,7 +33,7 @@
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="txt_numerodocumento_proveedor_" min="-2" pref="322" max="-2" attributes="0"/>
+                                  <Component id="txtbuscarproveedor" min="-2" pref="322" max="-2" attributes="0"/>
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -58,7 +58,7 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="txt_numerodocumento_proveedor_" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="txtbuscarproveedor" min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="btn_consultarproveedor_" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
@@ -73,7 +73,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="txt_numerodocumento_proveedor_">
+    <Component class="javax.swing.JTextField" name="txtbuscarproveedor">
     </Component>
     <Component class="javax.swing.JButton" name="btn_agregarproveedor_">
       <Properties>

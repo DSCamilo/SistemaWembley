@@ -29,7 +29,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txt_numerodocumento_proveedor_ = new javax.swing.JTextField();
+        txtbuscarproveedor = new javax.swing.JTextField();
         btn_agregarproveedor_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btn_consultarproveedor_ = new javax.swing.JButton();
@@ -100,7 +100,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
                             .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txt_numerodocumento_proveedor_, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtbuscarproveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1))
                                 .addGap(18, 18, 18)
                                 .addComponent(btn_consultarproveedor_))
@@ -117,7 +117,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txt_numerodocumento_proveedor_, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtbuscarproveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_consultarproveedor_))
                 .addGap(48, 48, 48)
                 .addComponent(jLabel2)
@@ -151,6 +151,6 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField txt_numerodocumento_proveedor_;
+    private javax.swing.JTextField txtbuscarproveedor;
     // End of variables declaration//GEN-END:variables
 }
