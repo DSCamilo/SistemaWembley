@@ -18,7 +18,7 @@ public class Gestion_Proveedores {
      Connection conexion;
     Statement sentencia;  //sentencias Query insert,update,delete
     ResultSet consulta;   
-       IU_ConsultarProveedor enviar= new  IU_ConsultarProveedor();
+    
     
     public void conectar(){
     
@@ -52,15 +52,17 @@ public class Gestion_Proveedores {
 }
 public String [] consultar(String sql){
       String datos[]=new String[4];
-       String id="",tel="";
+       String id="",nom="",tel="",corr="";
     try {
               sentencia=conexion.createStatement();
               consulta=sentencia.executeQuery(sql);
              
               while(consulta.next()){
                   id=String.valueOf(consulta.getInt("id_proveedor"));
-                  tel=String.valueOf(consulta.getString("apellido"));
-                /*  datos[0]=id;
+                    nom=consulta.getString("nombre_e");
+                  tel=String.valueOf(consulta.getString("telefono"));
+                corr=consulta.getString("correo");
+                  /*  datos[0]=id;
                   datos[1]=consulta.getString("nombre_e");
                   datos[2]=tel;
                   datos[3]=consulta.getString("correo");*/
@@ -70,6 +72,6 @@ public String [] consultar(String sql){
           } catch (SQLException ex) {
               JOptionPane.showMessageDialog(null, "Error");
           }
-    return new String[]{id,tel};
+    return new String[]{id,nom,tel,corr};
 }
 }
