@@ -5,6 +5,11 @@
  */
 package vista;
 
+import control.Gestion_Productos;
+import javax.swing.JOptionPane;
+
+
+
 
 
 /**
@@ -13,11 +18,11 @@ package vista;
  */
 public class FrmAgregarProducto extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form FrmAgregarProducto
-     */
+    Gestion_Productos conectar;
+    String sql;
     public FrmAgregarProducto() {
         initComponents();
+        conectar=new Gestion_Productos();
     }
 
     /**
@@ -36,13 +41,12 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
         btn_agregarproducto_ = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jtxt_descripcionproducto_ = new javax.swing.JTextArea();
-        txt_cantidadproducto_ = new javax.swing.JTextField();
-        txt_precioproducto_ = new javax.swing.JTextField();
+        txtcantidadproducto = new javax.swing.JTextField();
+        txtprecioproducto = new javax.swing.JTextField();
         btn_agregarproveedor_1 = new javax.swing.JButton();
-        txt_nombreproducto_ = new javax.swing.JTextField();
+        txtnombreproducto = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        txtdescripcion = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
@@ -75,10 +79,6 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Agregar producto");
 
-        jtxt_descripcionproducto_.setColumns(20);
-        jtxt_descripcionproducto_.setRows(5);
-        jScrollPane1.setViewportView(jtxt_descripcionproducto_);
-
         btn_agregarproveedor_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_agregarproveedor_1.setText("Borrar");
         btn_agregarproveedor_1.setToolTipText("Registrar Usuario");
@@ -90,12 +90,23 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
 
+        txtdescripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtdescripcionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel6)
+                        .addGap(110, 110, 110)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addComponent(btn_agregarproducto_)
@@ -110,18 +121,11 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel5)))
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(121, 121, 121)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_nombreproducto_, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txt_cantidadproducto_, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txt_precioproducto_, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel6)
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1)
-                        .addGap(12, 12, 12)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtnombreproducto)
+                            .addComponent(txtcantidadproducto, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtprecioproducto, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtdescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))))
                 .addContainerGap(37, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -136,25 +140,23 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(jLabel6))
-                            .addComponent(jLabel1))
-                        .addGap(21, 21, 21)
-                        .addComponent(txt_nombreproducto_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel6))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addComponent(txtnombreproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txt_precioproducto_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtprecioproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txt_cantidadproducto_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtcantidadproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_agregarproducto_)
@@ -173,19 +175,22 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_agregarproducto_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproducto_ActionPerformed
-//    FrmRegistrarVenta IU_registrarVenta = new FrmRegistrarVenta();
-//    escritorio.add(IU_registrarVenta);
-//    IU_registrarVenta.show();
-    
-//    FrmAgregarProducto IU_RegistrarProducto = new FrmAgregarProducto();
-//      IU_Pricipal.add(IU_RegistrarProducto);
-//      IU_RegistrarProducto.show();
-    
+        conectar.conectar();
+        int pre=Integer.parseInt(txtprecioproducto.getText());
+        int can=Integer.parseInt(txtcantidadproducto.getText());
+          sql="insert into productos (nombre_p,descripcion,precio,cantidad)values('"+txtnombreproducto.getText()+"','"+txtdescripcion.getText()+
+                  "','"+pre+"','"+can+"')";
+          conectar.agregarproducto(sql);
+             
     }//GEN-LAST:event_btn_agregarproducto_ActionPerformed
 
     private void btn_agregarproveedor_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproveedor_1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_agregarproveedor_1ActionPerformed
+
+    private void txtdescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdescripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtdescripcionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -198,10 +203,9 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jtxt_descripcionproducto_;
-    private javax.swing.JTextField txt_cantidadproducto_;
-    private javax.swing.JTextField txt_nombreproducto_;
-    private javax.swing.JTextField txt_precioproducto_;
+    private javax.swing.JTextField txtcantidadproducto;
+    private javax.swing.JTextField txtdescripcion;
+    private javax.swing.JTextField txtnombreproducto;
+    private javax.swing.JTextField txtprecioproducto;
     // End of variables declaration//GEN-END:variables
 }

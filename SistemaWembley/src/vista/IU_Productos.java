@@ -101,9 +101,18 @@ public class IU_Productos extends javax.swing.JInternalFrame {
       FrmBuscarProducto IUBuscarProducto = new FrmBuscarProducto();
       Desk_ModuloProductos.add(IUBuscarProducto);
       IUBuscarProducto.show();
-      
+     
     }//GEN-LAST:event_BuscarProductos_MouseClicked
-
+    public void mostrareditar(){
+        
+       
+         FrmModificarProducto mp=new FrmModificarProducto();
+         Desk_ModuloProductos.add(mp);
+         mp.show();
+        
+       
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu AgregarProductos_;
