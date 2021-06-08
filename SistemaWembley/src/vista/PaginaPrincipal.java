@@ -25,7 +25,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
        super.setSize(dim);
 //        super.setUndecorated(true);
         super.setVisible(true);
-        Menu_Prin_Usr.setEnabled(false);
+        //Menu_Prin_Usr.setEnabled(false);
 
     }
 
