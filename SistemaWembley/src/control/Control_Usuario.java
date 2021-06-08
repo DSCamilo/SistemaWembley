@@ -63,7 +63,7 @@ public void iniciarsesion(String sql,String tipo){
                     if (resultado==1) {
                            IU_Principal principal=new IU_Principal();
                            principal.comprobarusuario(tipo);
-                         
+                           System.out.println(tipo);
                            principal.setVisible(true);
                            IU_AccederSistema acceder=new IU_AccederSistema();
                            acceder.setVisible(false);
