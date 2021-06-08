@@ -82,19 +82,54 @@ public String [] consultar(String sql){
      
       
                String tipo="";
+               String us="";
+               String con="";
+               String id="";
     try {
               sentencia=conexion.createStatement();
               consulta=sentencia.executeQuery(sql);
              
               while(consulta.next()){
+                  id=consulta.getString("id_usuario");
                   tipo=consulta.getString("tipo");
-                 
+                 us=consulta.getString("usuario");
+                 con=consulta.getString("password");
                   
               }
               
           } catch (SQLException ex) {
               JOptionPane.showMessageDialog(null, "Error");
           }
-    return new String[]{tipo};
+    return new String[]{id,tipo,us,con};
 }
+public void eliminar(String sql){
+      try {
+              sentencia = conexion.createStatement();
+              int valor= sentencia.executeUpdate(sql);
+              
+              if (valor>0) {
+                   JOptionPane.showMessageDialog(null, "Eliminado ");
+              }
+              System.out.println("Valor = "+valor);
+          } catch (SQLException ex) {
+              JOptionPane.showMessageDialog(null, "Error al eliminar");
+          }
+          
+}
+ public void modificar(String sql){
+          try {
+              sentencia = conexion.createStatement();
+              int valor= sentencia.executeUpdate(sql);
+              
+              if (valor>0) {
+                   JOptionPane.showMessageDialog(null, "Modificado");
+              }
+              System.out.println("Valor = "+valor);
+          } catch (SQLException ex) {
+              JOptionPane.showMessageDialog(null, "Error al modificar");
+          }
+          
+       
+        
+    }
 }

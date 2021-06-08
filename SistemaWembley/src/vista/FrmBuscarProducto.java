@@ -41,6 +41,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         txtcantidadproducto = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
+        btneliminar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -106,6 +107,15 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("ID");
 
+        btneliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btneliminar.setText("Eliminar");
+        btneliminar.setToolTipText("Registrar Usuario");
+        btneliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btneliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -130,11 +140,13 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel8)
                                     .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(51, 51, 51))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn_RegistrarVenta_)
-                                .addGap(85, 85, 85)
-                                .addComponent(btneditar))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btn_RegistrarVenta_)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btneliminar)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btneditar))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -191,7 +203,8 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_RegistrarVenta_)
-                    .addComponent(btneditar))
+                    .addComponent(btneditar)
+                    .addComponent(btneliminar))
                 .addGap(30, 30, 30))
         );
 
@@ -245,6 +258,13 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
       
         
+        sql="update productos set nombre_p= '"+txtnombreproducto.getText()+"',descripcion='"+txtdescripcion.getText()+"',precio='"+
+       txtprecioproducto.getText()+"',cantidad='"+
+       txtcantidadproducto.getText()+"'where id_producto="+"'"+txtid.getText()+"'";
+       conectar.modificar(sql);
+       
+        System.out.println("sql="+sql);
+        
        
     }//GEN-LAST:event_btneditarActionPerformed
 
@@ -252,11 +272,19 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdescripcionActionPerformed
 
+    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
+         conectar.conectar();      
+        sql="delete from productos where id_producto="+"'"+txtid.getText()+"'";
+        conectar.eliminar(sql);
+       
+    }//GEN-LAST:event_btneliminarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
     private javax.swing.JButton btn_RegistrarVenta_;
     private javax.swing.JButton btneditar;
+    private javax.swing.JButton btneliminar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
