@@ -1,18 +1,18 @@
 package vista;
 
-import control.Gestion_Productos;
+import control.Control_Productos;
 import vista.IU_Productos;
 import vista.FrmRegistrarVenta;
 
 public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
-    Gestion_Productos conectar;
+    Control_Productos conectar;
    
     String sql;
     String idu;
     public FrmBuscarProducto() {
         initComponents();
-        conectar=new Gestion_Productos();
+        conectar=new Control_Productos();
       
     }
 
@@ -243,8 +243,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-        IU_Productos mp=  new IU_Productos(); 
-        mp.mostrareditar();
+      
         
        
     }//GEN-LAST:event_btneditarActionPerformed

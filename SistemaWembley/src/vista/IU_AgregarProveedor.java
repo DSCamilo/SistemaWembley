@@ -1,17 +1,17 @@
 
 package vista;
 
-import control.Gestion_Proveedores;
+import control.Control_Proveedores;
 import javax.swing.JOptionPane;
 
 
 public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
 
-   Gestion_Proveedores conectar;
+   Control_Proveedores conectar;
    String sql;
     public IU_AgregarProveedor() {
         initComponents();
-        conectar=new Gestion_Proveedores();
+        conectar=new Control_Proveedores();
         
 
     }
@@ -34,6 +34,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
         txtnombreempresa = new javax.swing.JTextField();
         txttelefonoempresa = new javax.swing.JTextField();
         txtcorreoempresa = new javax.swing.JTextField();
+        btn_agregarproveedor_1 = new javax.swing.JButton();
 
         setTitle("Agregar proveedor");
 
@@ -60,6 +61,15 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Correo electronico");
 
+        btn_agregarproveedor_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_agregarproveedor_1.setText("Cancelar");
+        btn_agregarproveedor_1.setToolTipText("Registrar Usuario");
+        btn_agregarproveedor_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_agregarproveedor_1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,7 +77,10 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_agregarproveedor_)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btn_agregarproveedor_)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_agregarproveedor_1))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -84,7 +97,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                                     .addComponent(txttelefonoempresa, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(jLabel6)
                     .addComponent(jLabel9))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +122,9 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                     .addComponent(jLabel9)
                     .addComponent(txtcorreoempresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
-                .addComponent(btn_agregarproveedor_)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_agregarproveedor_)
+                    .addComponent(btn_agregarproveedor_1))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -117,18 +132,33 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_agregarproveedor_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproveedor_ActionPerformed
-       conectar.conectar();
+       if (txtnombreempresa.getText().isEmpty()|| txttelefonoempresa.getText().isEmpty()||txtcorreoempresa.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null,"No se puede continuar. Hay celdas vacias" );
+        }else{
+       
+        if (txttelefonoempresa.getText().matches("[0-9]*")) {
+              conectar.conectar();
        int telefono=Integer.parseInt(txttelefonoempresa.getText());
        
        sql="insert into proveedores (nombre_e,telefono,correo)values('"+txtnombreempresa.getText()+"','"+telefono+"','"+txtcorreoempresa.getText()+"')";
        conectar.agregarproveedor(sql);
                                    
-        JOptionPane.showMessageDialog(null, "Registro exitoso");
+        //JOptionPane.showMessageDialog(null, "Registro exitoso");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo se puede ingresar valores de tipo numerico ");
+        }
+        
+      }
     }//GEN-LAST:event_btn_agregarproveedor_ActionPerformed
+
+    private void btn_agregarproveedor_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproveedor_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_agregarproveedor_1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_agregarproveedor_;
+    private javax.swing.JButton btn_agregarproveedor_1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;

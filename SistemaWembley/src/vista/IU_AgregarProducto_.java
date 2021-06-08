@@ -5,7 +5,7 @@
  */
 package vista;
 
-import control.Gestion_Productos;
+import control.Control_Productos;
 import javax.swing.JOptionPane;
 
 
@@ -16,13 +16,13 @@ import javax.swing.JOptionPane;
  *
  * @author Usuario
  */
-public class FrmAgregarProducto extends javax.swing.JInternalFrame {
+public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
 
-    Gestion_Productos conectar;
+    Control_Productos conectar;
     String sql;
-    public FrmAgregarProducto() {
+    public IU_AgregarProducto_() {
         initComponents();
-        conectar=new Gestion_Productos();
+        conectar=new Control_Productos();
     }
 
     /**
@@ -175,12 +175,20 @@ public class FrmAgregarProducto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_agregarproducto_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproducto_ActionPerformed
-        conectar.conectar();
+          if (txtprecioproducto.getText().matches("[0-9]*")&&txtcantidadproducto.getText().matches("[0-9]*")) {
+            conectar.conectar();
         int pre=Integer.parseInt(txtprecioproducto.getText());
         int can=Integer.parseInt(txtcantidadproducto.getText());
           sql="insert into productos (nombre_p,descripcion,precio,cantidad)values('"+txtnombreproducto.getText()+"','"+txtdescripcion.getText()+
                   "','"+pre+"','"+can+"')";
           conectar.agregarproducto(sql);
+          }else {
+              
+                JOptionPane.showMessageDialog(null, "Solo se puede ingresar valores de tipo numerico ");
+          }
+          
+
+      
              
     }//GEN-LAST:event_btn_agregarproducto_ActionPerformed
 

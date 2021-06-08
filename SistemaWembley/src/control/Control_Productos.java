@@ -9,7 +9,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 
-public class Gestion_Productos {
+public class Control_Productos {
     
     
      Connection conexion;
@@ -37,7 +37,7 @@ public class Gestion_Productos {
               int valor= sentencia.executeUpdate(sql);
               
               if (valor>0) {
-                   JOptionPane.showMessageDialog(null, "Producto registrado ");
+                   JOptionPane.showMessageDialog(null, "Accion realizada ");
               }
               System.out.println("Valor = "+valor);
           } catch (SQLException ex) {

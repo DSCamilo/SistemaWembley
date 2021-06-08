@@ -7,7 +7,7 @@ import javax.swing.JFrame;
  *
  * @author Usuario
  */
-public class PaginaPrincipal extends javax.swing.JFrame {
+public class IU_Principal extends javax.swing.JFrame {
 
     public Dimension dim;
 
@@ -16,17 +16,14 @@ public class PaginaPrincipal extends javax.swing.JFrame {
       
     }
 
-    /**
-     * Creates new form PaginaPrincipal
-     */
-    public PaginaPrincipal() {
+    String tipous;
+    public IU_Principal() {
         initComponents();
         dim = super.getToolkit().getScreenSize();
        super.setSize(dim);
 //        super.setUndecorated(true);
-        super.setVisible(true);
-        Menu_Prin_Usr.setEnabled(false);
-
+        //super.setVisible(true);
+     
     }
 
     @SuppressWarnings("unchecked")
@@ -35,8 +32,6 @@ public class PaginaPrincipal extends javax.swing.JFrame {
 
         Desk_IU_Principal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         Menu_Prin_Adm = new javax.swing.JMenu();
         Pta_Registrar_Usuario_ = new javax.swing.JMenuItem();
         Pta_Productos_adm_ = new javax.swing.JMenuItem();
@@ -45,7 +40,6 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         Menu_Prin_Usr = new javax.swing.JMenu();
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
         Pta_Listar_Horarios_ = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IU_Principal");
@@ -63,14 +57,6 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         );
 
         getContentPane().add(Desk_IU_Principal);
-
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/login.png"))); // NOI18N
-        jMenu1.setText("File");
-
-        jMenuItem1.setText("jMenuItem1");
-        jMenu1.add(jMenuItem1);
-
-        jMenuBar1.add(jMenu1);
 
         Menu_Prin_Adm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/administracion.png"))); // NOI18N
         Menu_Prin_Adm.setText("Administrador");
@@ -131,10 +117,6 @@ public class PaginaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(Menu_Prin_Usr);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/support.png"))); // NOI18N
-        jMenu4.setText("Ayuda");
-        jMenuBar1.add(jMenu4);
-
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -147,17 +129,18 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
 
     private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
-        // TODO add your handling code here:
+        comprobarusuario("");
     }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
-        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
+     
+/*        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
         Desk_IU_Principal.add(IU_BuscarProducto);
-        IU_BuscarProducto.show();
+        IU_BuscarProducto.show();*/
     }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
 
     private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed
-        FrmRegistrarUsuario IU_RegistrarUsuario = new FrmRegistrarUsuario();
+        IU_RegistrarUsuario IU_RegistrarUsuario = new IU_RegistrarUsuario();
         Desk_IU_Principal.add(IU_RegistrarUsuario);
         IU_RegistrarUsuario.setVisible(true);
     }//GEN-LAST:event_Pta_Registrar_Usuario_ActionPerformed
@@ -167,7 +150,22 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         Desk_IU_Principal.add(IU_Proveedores);
         IU_Proveedores.show();
     }//GEN-LAST:event_Pta_ProveedoresActionPerformed
+public void comprobarusuario(String tipo){
+    // IU_Productos opcionesModProductos = new IU_Productos();
+        //   opcionesModProductos.comprobarusuario(tipo);
 
+    
+    if (tipo.equals("Administrador")) {
+          Menu_Prin_Usr.setEnabled(false);
+    }else{
+        Menu_Prin_Adm.setEnabled(false);
+    }
+        IU_Productos opcionesModProductos = new IU_Productos();
+         
+        Desk_IU_Principal.add(opcionesModProductos);
+        opcionesModProductos.show();
+}
+    
     /**
      * @param args the command line arguments
      */
@@ -185,20 +183,23 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IU_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IU_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IU_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IU_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PaginaPrincipal().setVisible(true);
+                new IU_Principal().setVisible(true);
             }
         });
 
@@ -214,9 +215,6 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem Pta_Productos_usr_;
     private javax.swing.JMenuItem Pta_Proveedores;
     private javax.swing.JMenuItem Pta_Registrar_Usuario_;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,20 +5,23 @@
  */
 package vista;
 
-import control.Gestion_usuario;
+import control.Control_Usuario;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Usuario
  */
-public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
+public class IU_RegistrarUsuario extends javax.swing.JInternalFrame {
 
-   Gestion_usuario conectar;
+   Control_Usuario conectar;
    String sql;
-    public FrmRegistrarUsuario() {
-        conectar=new Gestion_usuario();
+    public IU_RegistrarUsuario() {
+     
         initComponents();
-        setTitle("Registrar Usuario");
+         setTitle("Registrar Usuario");
+        conectar=new Control_Usuario();
+       
     }
 
     /**
@@ -147,15 +150,22 @@ public class FrmRegistrarUsuario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_RegistrarUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarUsuario_ActionPerformed
-        conectar.conectar();
-        String tipo="vendedor";
+         String pass=String.valueOf(txtcontraseñaregistro.getPassword()); 
+        if (pass.isEmpty()|| txtusuarioregistro.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null,"No se puede continuar. Hay celdas vacias" );
+        }else{
+               conectar.conectar();
+        String tipo="Vendedor";
         if ( tipousuario.isSelected()) {
             tipo="Administrador";
         }
        
-        String pass=String.valueOf(txtcontraseñaregistro.getPassword());
+       
         sql="insert into usuarios (usuario,password,tipo)values('"+txtusuarioregistro.getText()+"','"+pass+"','"+tipo+"')";
         conectar.registrarusuario(sql);
+        }
+
+     
     }//GEN-LAST:event_btn_RegistrarUsuario_ActionPerformed
 
     private void btn_CancelarRegistroUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelarRegistroUsuario_ActionPerformed

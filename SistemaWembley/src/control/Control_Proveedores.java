@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import vista.IU_AccederSistema;
 import vista.IU_ConsultarProveedor;
-import vista.PaginaPrincipal;
+import vista.IU_Principal;
 
 
-public class Gestion_Proveedores {
+public class Control_Proveedores {
     
      Connection conexion;
     Statement sentencia;  //sentencias Query insert,update,delete
@@ -40,7 +40,7 @@ public class Gestion_Proveedores {
               int valor= sentencia.executeUpdate(sql);
               
               if (valor>0) {
-                   JOptionPane.showMessageDialog(null, "Proveedor registrado ");
+                    JOptionPane.showMessageDialog(null,"Acción realizada");
               }
               System.out.println("Valor = "+valor);
           } catch (SQLException ex) {
@@ -53,11 +53,13 @@ public class Gestion_Proveedores {
 public String [] consultar(String sql){
       String datos[]=new String[4];
        String id="",nom="",tel="",corr="";
+       String rrr;
     try {
               sentencia=conexion.createStatement();
               consulta=sentencia.executeQuery(sql);
              
               while(consulta.next()){
+                 
                   id=String.valueOf(consulta.getInt("id_proveedor"));
                     nom=consulta.getString("nombre_e");
                   tel=String.valueOf(consulta.getString("telefono"));
@@ -68,7 +70,7 @@ public String [] consultar(String sql){
                   datos[3]=consulta.getString("correo");*/
                   
               }
-              
+               System.out.println(consulta.next());
           } catch (SQLException ex) {
               JOptionPane.showMessageDialog(null, "Error");
           }
