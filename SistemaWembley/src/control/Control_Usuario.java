@@ -24,7 +24,8 @@ public void conectar(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
             
-            conexion= DriverManager.getConnection("jdbc:mysql://localhost/base_wembley","root","");
+           // conexion= DriverManager.getConnection("jdbc:mysql://sql10.freemysqlhosting.net/sql10417988","sql10417988","4jEdtaPCAa");
+             conexion= DriverManager.getConnection("jdbc:mysql://bmi9ixewooj1cgxwyjx5-mysql.services.clever-cloud.com/bmi9ixewooj1cgxwyjx5","um14flkww8cqs7rc","wnlvWhjXbNLTAM3dOZLw");
             System.out.println("conexion exitosa");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "No se encontro el driver");

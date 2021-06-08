@@ -5,10 +5,20 @@ import control.Control_Proveedores;
 import javax.swing.JOptionPane;
 
 
+
 public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
 
+<<<<<<< HEAD
    Control_Proveedores conectar;
    String sql;
+=======
+    
+   
+    
+    /**
+     * Creates new form FrmAgregarProveedor
+     */
+>>>>>>> DSCamilo
     public IU_AgregarProveedor() {
         initComponents();
         conectar=new Control_Proveedores();
@@ -61,10 +71,20 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Correo electronico");
 
+<<<<<<< HEAD
         btn_agregarproveedor_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_agregarproveedor_1.setText("Cancelar");
         btn_agregarproveedor_1.setToolTipText("Registrar Usuario");
         btn_agregarproveedor_1.addActionListener(new java.awt.event.ActionListener() {
+=======
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/cancel32.png"))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> DSCamilo
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_agregarproveedor_1ActionPerformed(evt);
             }
@@ -78,9 +98,19 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addComponent(btn_agregarproveedor_)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_agregarproveedor_1))
+=======
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel1)
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(btn_agregarproveedor_))
+>>>>>>> DSCamilo
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -151,9 +181,27 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
       }
     }//GEN-LAST:event_btn_agregarproveedor_ActionPerformed
 
+<<<<<<< HEAD
     private void btn_agregarproveedor_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproveedor_1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_agregarproveedor_1ActionPerformed
+=======
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+        
+      //  dispose();
+     
+     
+     
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> DSCamilo
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+      dispose();
+      IU_Proveedores restaurarVentanas = new IU_Proveedores();
+      
+      restaurarVentanas.isVisible();
+    }//GEN-LAST:event_jButton1MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
