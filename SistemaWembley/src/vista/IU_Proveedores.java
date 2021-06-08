@@ -1,28 +1,24 @@
-
 package vista;
 
 import java.awt.Dimension;
+import java.util.Locale;
 import javax.swing.JFrame;
 
 public class IU_Proveedores extends javax.swing.JInternalFrame {
-    
 
-
-  
     public Dimension dim;
+
     /**
      * Creates new form IU_Productos
      */
     public IU_Proveedores() {
         initComponents();
-        
+
         dim = super.getToolkit().getScreenSize();
-       super.setSize(dim);
+        super.setSize(dim);
 //        super.setUndecorated(true);
         super.setVisible(true);
     }
-    
-     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -84,27 +80,28 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgregarProveedor_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarProveedor_ActionPerformed
-        
+
     }//GEN-LAST:event_AgregarProveedor_ActionPerformed
 
     private void AgregarProveedor_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgregarProveedor_MouseClicked
+
+        //   Desk_ModuloProveedores.removeAll();
+        //  Desk_ModuloProveedores.revalidate();
         IU_AgregarProveedor IUAgregarProveedor = new IU_AgregarProveedor();
         Desk_ModuloProveedores.add(IUAgregarProveedor);
         IUAgregarProveedor.show();
-        
-        AgregarProveedor_.setVisible(false);
-      
-        
+
+
     }//GEN-LAST:event_AgregarProveedor_MouseClicked
 
     private void BuscarProveedor_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarProveedor_MouseClicked
-       IU_ConsultarProveedor IU_ConsultarProveedor = new IU_ConsultarProveedor();
+//       Desk_ModuloProveedores.removeAll();
+        //     Desk_ModuloProveedores.revalidate();
+        IU_ConsultarProveedor IU_ConsultarProveedor = new IU_ConsultarProveedor();
         Desk_ModuloProveedores.add(IU_ConsultarProveedor);
         IU_ConsultarProveedor.show();
-        AgregarProveedor_.setVisible(true);
- 
-      
-      
+
+
     }//GEN-LAST:event_BuscarProveedor_MouseClicked
 
 
