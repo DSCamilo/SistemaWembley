@@ -113,7 +113,12 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Usr.add(Pta_Productos_usr_);
 
         Pta_Listar_Horarios_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/calendario.png"))); // NOI18N
-        Pta_Listar_Horarios_.setText("Listar Horarios");
+        Pta_Listar_Horarios_.setText("Inventario");
+        Pta_Listar_Horarios_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pta_Listar_Horarios_ActionPerformed(evt);
+            }
+        });
         Menu_Prin_Usr.add(Pta_Listar_Horarios_);
 
         Pta_Registrar_Venta_usr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/punto-de-venta.png"))); // NOI18N
@@ -168,6 +173,10 @@ public class IU_Principal extends javax.swing.JFrame {
         
     
     }//GEN-LAST:event_Pta_Registrar_Venta_usrActionPerformed
+
+    private void Pta_Listar_Horarios_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Listar_Horarios_ActionPerformed
+      
+    }//GEN-LAST:event_Pta_Listar_Horarios_ActionPerformed
 public void comprobarusuario(String tipo){
   
     if (tipo.equals("Administrador")) {

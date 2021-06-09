@@ -82,8 +82,11 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/vista/Imagenes/calendario.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Listar Horarios"/>
+                <Property name="text" type="java.lang.String" value="Inventario"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Pta_Listar_Horarios_ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="Pta_Registrar_Venta_usr">
               <Properties>
