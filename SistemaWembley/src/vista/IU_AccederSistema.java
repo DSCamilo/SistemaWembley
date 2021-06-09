@@ -116,7 +116,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
           sql="select *  from usuarios where usuario='"+txtusuarioinicio.getText()+"' and password='"+pass+"'";
            conectar.conectar();
             String dato[]=conectar.consultar(sql);
-          String tipo=dato[0];
+          String tipo=dato[1];
           conectar.iniciarsesion(sql,tipo);
      
         }

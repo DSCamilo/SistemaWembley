@@ -62,7 +62,7 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Adm.setText("Administrador");
 
         Pta_Registrar_Usuario_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/registrar usuario.png"))); // NOI18N
-        Pta_Registrar_Usuario_.setText("Registrar usuario");
+        Pta_Registrar_Usuario_.setText("Usuarios");
         Pta_Registrar_Usuario_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pta_Registrar_Usuario_ActionPerformed(evt);
@@ -129,18 +129,18 @@ public class IU_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
 
     private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
-        comprobarusuario("");
+       
     }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
      
-/*        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
+        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
         Desk_IU_Principal.add(IU_BuscarProducto);
-        IU_BuscarProducto.show();*/
+        IU_BuscarProducto.show();
     }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
 
     private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed
-        IU_RegistrarUsuario IU_RegistrarUsuario = new IU_RegistrarUsuario();
+        IU_Usuario IU_RegistrarUsuario = new IU_Usuario();
         Desk_IU_Principal.add(IU_RegistrarUsuario);
         IU_RegistrarUsuario.setVisible(true);
     }//GEN-LAST:event_Pta_Registrar_Usuario_ActionPerformed
@@ -151,19 +151,13 @@ public class IU_Principal extends javax.swing.JFrame {
         IU_Proveedores.show();
     }//GEN-LAST:event_Pta_ProveedoresActionPerformed
 public void comprobarusuario(String tipo){
-    // IU_Productos opcionesModProductos = new IU_Productos();
-        //   opcionesModProductos.comprobarusuario(tipo);
-
-    
+  
     if (tipo.equals("Administrador")) {
           Menu_Prin_Usr.setEnabled(false);
     }else{
         Menu_Prin_Adm.setEnabled(false);
     }
-        IU_Productos opcionesModProductos = new IU_Productos();
-         
-        Desk_IU_Principal.add(opcionesModProductos);
-        opcionesModProductos.show();
+     
 }
     
     /**

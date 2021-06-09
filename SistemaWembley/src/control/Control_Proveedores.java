@@ -76,4 +76,34 @@ public String [] consultar(String sql){
           }
     return new String[]{id,nom,tel,corr};
 }
+public void eliminar(String sql){
+      try {
+              sentencia = conexion.createStatement();
+              int valor= sentencia.executeUpdate(sql);
+              
+              if (valor>0) {
+                   JOptionPane.showMessageDialog(null, "Eliminado ");
+              }
+              System.out.println("Valor = "+valor);
+          } catch (SQLException ex) {
+              JOptionPane.showMessageDialog(null, "Error al eliminar");
+          }
+          
+}
+ public void modificar(String sql){
+          try {
+              sentencia = conexion.createStatement();
+              int valor= sentencia.executeUpdate(sql);
+              
+              if (valor>0) {
+                   JOptionPane.showMessageDialog(null, "Modificado");
+              }
+              System.out.println("Valor = "+valor);
+          } catch (SQLException ex) {
+              JOptionPane.showMessageDialog(null, "Error al modificar");
+          }
+          
+       
+        
+    }
 }
