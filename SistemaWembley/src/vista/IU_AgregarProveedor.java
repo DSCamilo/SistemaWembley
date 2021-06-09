@@ -141,7 +141,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
               conectar.conectar();
        int telefono=Integer.parseInt(txttelefonoempresa.getText());
        
-       sql="insert into proveedores (nombre_e,telefono,correo)values('"+txtnombreempresa.getText()+"','"+telefono+"','"+txtcorreoempresa.getText()+"')";
+       sql="insert into proveedores (nombre_e,telefono,correo)values('"+txtnombreempresa.getText()+"','"+txttelefonoempresa.getText()+"','"+txtcorreoempresa.getText()+"')";
        conectar.agregarproveedor(sql);
                                    
         //JOptionPane.showMessageDialog(null, "Registro exitoso");

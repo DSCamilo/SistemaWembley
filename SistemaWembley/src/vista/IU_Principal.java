@@ -39,7 +39,6 @@ public class IU_Principal extends javax.swing.JFrame {
         Pta_Generar_Informes_ = new javax.swing.JMenuItem();
         Pta_Proveedores = new javax.swing.JMenuItem();
         Menu_Prin_Usr = new javax.swing.JMenu();
-        Pta_Productos_usr_ = new javax.swing.JMenuItem();
         Pta_Ventas_ = new javax.swing.JMenuItem();
         Pta_Registrar_Venta_usr = new javax.swing.JMenuItem();
         Pta_Registrar_reserva_ = new javax.swing.JMenuItem();
@@ -105,15 +104,6 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Usr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/empleado.png"))); // NOI18N
         Menu_Prin_Usr.setText("Vendedor");
 
-        Pta_Productos_usr_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/productos.png"))); // NOI18N
-        Pta_Productos_usr_.setText("Productos");
-        Pta_Productos_usr_.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pta_Productos_usr_ActionPerformed(evt);
-            }
-        });
-        Menu_Prin_Usr.add(Pta_Productos_usr_);
-
         Pta_Ventas_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/ventas.png"))); // NOI18N
         Pta_Ventas_.setText("Ventas");
         Pta_Ventas_.addActionListener(new java.awt.event.ActionListener() {
@@ -157,13 +147,6 @@ public class IU_Principal extends javax.swing.JFrame {
     private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
 
     }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
-
-    private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
-
-        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
-        Desk_IU_Principal.add(IU_BuscarProducto);
-        IU_BuscarProducto.show();
-    }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
 
     private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed
         IU_Usuario IU_RegistrarUsuario = new IU_Usuario();
@@ -251,7 +234,6 @@ public class IU_Principal extends javax.swing.JFrame {
     private javax.swing.JMenu Menu_Prin_Usr;
     private javax.swing.JMenuItem Pta_Generar_Informes_;
     private javax.swing.JMenuItem Pta_Productos_adm_;
-    private javax.swing.JMenuItem Pta_Productos_usr_;
     private javax.swing.JMenuItem Pta_Proveedores;
     private javax.swing.JMenuItem Pta_Registrar_Usuario_;
     private javax.swing.JMenuItem Pta_Registrar_Venta_usr;

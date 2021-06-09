@@ -366,7 +366,7 @@ public class FrmRegistrarVenta extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_ConfirmarVenta_ActionPerformed
 
     private void btn_Cancelar_Venta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Cancelar_Venta_ActionPerformed
-        // TODO add your handling code here:
+    dispose();
     }//GEN-LAST:event_btn_Cancelar_Venta_ActionPerformed
 
     private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
