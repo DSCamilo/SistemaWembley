@@ -45,6 +45,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btneditar = new javax.swing.JButton();
 
+        setClosable(true);
         setTitle("Consultar proveedor");
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

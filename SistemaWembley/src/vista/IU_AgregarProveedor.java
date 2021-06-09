@@ -36,6 +36,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
         txtcorreoempresa = new javax.swing.JTextField();
         btn_agregarproveedor_1 = new javax.swing.JButton();
 
+        setClosable(true);
         setTitle("Agregar proveedor");
 
         btn_agregarproveedor_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
