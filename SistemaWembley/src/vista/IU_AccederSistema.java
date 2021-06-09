@@ -64,7 +64,6 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         jLabel3.setText("Contraseña:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
-        txtusuarioinicio.setBackground(new java.awt.Color(255, 255, 255));
         txtusuarioinicio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtusuarioinicio.setForeground(new java.awt.Color(204, 204, 204));
         getContentPane().add(txtusuarioinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 200, 30));
@@ -80,7 +79,6 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         });
         getContentPane().add(btniniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, -1));
 
-        txtpassinicio.setBackground(new java.awt.Color(255, 255, 255));
         txtpassinicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtpassinicioActionPerformed(evt);
@@ -89,7 +87,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         getContentPane().add(txtpassinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 200, 30));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/iniciosesionfondo7.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 440, 440));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

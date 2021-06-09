@@ -14,14 +14,15 @@ import javax.swing.JOptionPane;
  */
 public class IU_Usuario extends javax.swing.JInternalFrame {
 
-   Control_Usuario conectar;
-   String sql;
+    Control_Usuario conectar;
+    String sql;
+
     public IU_Usuario() {
-     
+
         initComponents();
-         setTitle("Usuarios");
-        conectar=new Control_Usuario();
-       
+        setTitle("Usuarios");
+        conectar = new Control_Usuario();
+
     }
 
     /**
@@ -107,7 +108,7 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
 
         btnreditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnreditar.setText("Editar");
-        btnreditar.setToolTipText("Registrar Usuario");
+        btnreditar.setToolTipText("");
         btnreditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnreditarActionPerformed(evt);
@@ -116,7 +117,7 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
 
         btneliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btneliminar.setText("Eliminar");
-        btneliminar.setToolTipText("Registrar Usuario");
+        btneliminar.setToolTipText("");
         btneliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btneliminarActionPerformed(evt);
@@ -233,26 +234,25 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_RegistrarUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarUsuario_ActionPerformed
-         String pass=String.valueOf(txtcontraseñaregistro.getPassword()); 
-        if (pass.isEmpty()|| txtusuarioregistro.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null,"No se puede continuar. Hay celdas vacias" );
-        }else{
-               conectar.conectar();
-        String tipo="Vendedor";
-        if ( tipousuario.isSelected()) {
-            tipo="Administrador";
-        }
-       
-       
-        sql="insert into usuarios (usuario,password,tipo)values('"+txtusuarioregistro.getText()+"','"+pass+"','"+tipo+"')";
-        conectar.registrarusuario(sql);
+        String pass = String.valueOf(txtcontraseñaregistro.getPassword());
+        if (pass.isEmpty() || txtusuarioregistro.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No se puede continuar. Hay celdas vacias");
+        } else {
+            conectar.conectar();
+            String tipo = "Vendedor";
+            if (tipousuario.isSelected()) {
+                tipo = "Administrador";
+            }
+
+            sql = "insert into usuarios (usuario,password,tipo)values('" + txtusuarioregistro.getText() + "','" + pass + "','" + tipo + "')";
+            conectar.registrarusuario(sql);
         }
 
-     
+
     }//GEN-LAST:event_btn_RegistrarUsuario_ActionPerformed
 
     private void btn_CancelarRegistroUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelarRegistroUsuario_ActionPerformed
-    dispose();
+        dispose();
     }//GEN-LAST:event_btn_CancelarRegistroUsuario_ActionPerformed
 
     private void txtcontraseñaregistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontraseñaregistroActionPerformed
@@ -260,52 +260,51 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtcontraseñaregistroActionPerformed
 
     private void btnreditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreditarActionPerformed
-          sql="update usuarios set usuario= '"+txtususarioresultado.getText()+"',password='"+txtcontraseñaresultado.getText()+"',tipo='"+
-       txttiporesultado.getText()+"'where id_usuario="+"'"+txtid.getText()+"'";
-       conectar.modificar(sql);
-       
-        System.out.println("sql="+sql);
-        
-        
+        sql = "update usuarios set usuario= '" + txtususarioresultado.getText() + "',password='" + txtcontraseñaresultado.getText() + "',tipo='"
+                + txttiporesultado.getText() + "'where id_usuario=" + "'" + txtid.getText() + "'";
+        conectar.modificar(sql);
+
+        System.out.println("sql=" + sql);
+
+
     }//GEN-LAST:event_btnreditarActionPerformed
 
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-       conectar.conectar();      
-        sql="delete from usuarios where usuario="+"'"+txtususarioresultado.getText()+"'";
+        conectar.conectar();
+        sql = "delete from usuarios where usuario=" + "'" + txtususarioresultado.getText() + "'";
         conectar.eliminar(sql);
-        
+
     }//GEN-LAST:event_btneliminarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         conectar.conectar();
-        String pass=String.valueOf(txtcontraseñaregistro.getPassword());
+        String pass = String.valueOf(txtcontraseñaregistro.getPassword());
         String tipo;
         String us;
         String con;
         String id;
-     
-        
+
         if (txtbuscar.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Nose puede continuar. Hay cacillas vacias");
-        }else{
-            
-          sql="select * from usuarios where usuario ="+"'"+txtbuscar.getText()+"'" ;
-          
-      String dato[]=conectar.consultar(sql);
-        id=dato[0]; 
-        tipo=dato[1];
-          us=dato[2];
-          con=dato[3];
-        
-          txtususarioresultado.setText(us);
-          txtcontraseñaresultado.setText(con);
-          txttiporesultado.setText(tipo);
-          txtid.setText(id);
-          
-        System.out.println("sql="+sql);
+        } else {
 
- }
+            sql = "select * from usuarios where usuario =" + "'" + txtbuscar.getText() + "'";
+
+            String dato[] = conectar.consultar(sql);
+            id = dato[0];
+            tipo = dato[1];
+            us = dato[2];
+            con = dato[3];
+
+            txtususarioresultado.setText(us);
+            txtcontraseñaresultado.setText(con);
+            txttiporesultado.setText(tipo);
+            txtid.setText(id);
+
+            System.out.println("sql=" + sql);
+
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

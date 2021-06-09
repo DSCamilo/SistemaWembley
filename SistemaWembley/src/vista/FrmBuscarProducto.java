@@ -30,7 +30,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         btn_Buscarproducto_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btn_RegistrarVenta_ = new javax.swing.JButton();
+        btn_Salir = new javax.swing.JButton();
         btneditar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtnombreproducto = new javax.swing.JTextField();
@@ -43,6 +43,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
         btneliminar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -69,12 +70,12 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/buscar producto 64.png"))); // NOI18N
 
-        btn_RegistrarVenta_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_RegistrarVenta_.setText("Registrar venta");
-        btn_RegistrarVenta_.setToolTipText("Registrar Usuario");
-        btn_RegistrarVenta_.addActionListener(new java.awt.event.ActionListener() {
+        btn_Salir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Salir.setText("Salir");
+        btn_Salir.setToolTipText("Registrar Usuario");
+        btn_Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_RegistrarVenta_ActionPerformed(evt);
+                btn_SalirActionPerformed(evt);
             }
         });
 
@@ -117,6 +118,9 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Ingrese nombre:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -124,11 +128,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_Buscarproducto_)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -143,7 +142,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                                 .addGap(51, 51, 51))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(btn_RegistrarVenta_)
+                                    .addComponent(btn_Salir)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btneliminar)
                                     .addGap(18, 18, 18)
@@ -164,7 +163,15 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(44, Short.MAX_VALUE))))
+                        .addContainerGap(44, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Buscarproducto_)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,7 +188,9 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Buscarproducto_))
@@ -201,9 +210,9 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtprecioproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_RegistrarVenta_)
+                    .addComponent(btn_Salir)
                     .addComponent(btneditar)
                     .addComponent(btneliminar))
                 .addGap(30, 30, 30))
@@ -242,7 +251,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         idu = id;
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
-    private void btn_RegistrarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarVenta_ActionPerformed
+    private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
         
         dispose();
        
@@ -251,7 +260,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         
         win2.setVisible(true);
      
-    }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
+    }//GEN-LAST:event_btn_SalirActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
 
@@ -279,10 +288,11 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
-    private javax.swing.JButton btn_RegistrarVenta_;
+    private javax.swing.JButton btn_Salir;
     private javax.swing.JButton btneditar;
     private javax.swing.JButton btneliminar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
