@@ -40,7 +40,7 @@ public class Control_Ventas {
               }
               System.out.println("Valor = "+valor);
           } catch (SQLException ex) {
-              JOptionPane.showMessageDialog(null, "no se pudo registrar proveedor "+sql);
+              JOptionPane.showMessageDialog(null, "no se pudo registrar  "+sql);
               System.out.println(sql);
           }
           
@@ -48,27 +48,32 @@ public class Control_Ventas {
 }
 public String [] consultar(String sql){
       String datos[]=new String[4];
-       String nom="",des="";
-       String pre="",can="";
-               String id="";
+       String nombrep="";
+        String precio="";
+       String cantidad="";
+       String total="";
+       String nombrec="";
+       String documentoc="";
     try {
               sentencia=conexion.createStatement();
               consulta=sentencia.executeQuery(sql);
              
               while(consulta.next()){
-                  id=String.valueOf(consulta.getInt("id_producto"));
-                    nom=consulta.getString("nombre_p");
-                    des=consulta.getString("descripcion");
-                    pre=String.valueOf(consulta.getInt("precio"));
-                    can=String.valueOf(consulta.getInt("cantidad"));
+                  nombrep=consulta.getString("nombre_p");
+                    precio=String.valueOf(consulta.getString("precio"));
+                    cantidad=String.valueOf(consulta.getString("cantidad"));
+                    total=String.valueOf(consulta.getInt("total"));
+                    nombrec=consulta.getString("nombre_c");
+                    documentoc=String.valueOf(consulta.getInt("documento_c"));
                 
-                  
+                  System.out.println(sql);
               }
-              
+                
           } catch (SQLException ex) {
               JOptionPane.showMessageDialog(null, "Error");
+               
           }
-    return new String[]{id,nom,des,pre,can};
+    return new String[]{nombrep,precio,cantidad,total,nombrec,documentoc};
 }
 public void eliminar(String sql){
     

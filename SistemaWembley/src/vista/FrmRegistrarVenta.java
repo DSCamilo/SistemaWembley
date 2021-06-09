@@ -351,9 +351,12 @@ public class FrmRegistrarVenta extends javax.swing.JInternalFrame {
     private void btn_ConfirmarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmarVenta_ActionPerformed
          
             conectar.conectar();
-     
-          sql="insert into ventas (nombre_p,precio,cantidad,total,nombre_c,documento_c)values('"+txtnombrep.getText()+"','"+txtprecio.getText()+
-                  "','"+txtcantidad.getText()+"','"+txttotalventa.getText()+"','"+txtnombrec.getText()+"','"+txtdocumento.getText()+"')";
+     int pre=Integer.parseInt(txtprecio.getText());
+     int can=Integer.parseInt(txtcantidad.getText());
+     int total=Integer.parseInt(txttotalventa.getText());
+     int doc=Integer.parseInt(txtdocumento.getText());
+          sql="insert into ventas (nombre_p,precio,cantidad,total,nombre_c,documento_c)values('"+txtnombrep.getText()+"','"+pre+
+                  "','"+can+"','"+total+"','"+txtnombrec.getText()+"','"+doc+"')";
           conectar.agregarproducto(sql);
       
               

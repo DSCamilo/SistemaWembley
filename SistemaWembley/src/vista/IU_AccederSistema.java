@@ -31,7 +31,6 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jLabelIcono = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtusuarioinicio = new javax.swing.JTextField();
@@ -53,25 +52,22 @@ public class IU_AccederSistema extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, -1, -1));
-
-        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/pelota-de-futbol.png"))); // NOI18N
-        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         txtusuarioinicio.setBackground(new java.awt.Color(255, 255, 255));
         txtusuarioinicio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtusuarioinicio.setForeground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(txtusuarioinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 200, 30));
+        getContentPane().add(txtusuarioinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 200, 30));
 
         btniniciarsesion.setBackground(new java.awt.Color(0, 204, 0));
         btniniciarsesion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -82,7 +78,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
                 btniniciarsesionActionPerformed(evt);
             }
         });
-        getContentPane().add(btniniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
+        getContentPane().add(btniniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, -1));
 
         txtpassinicio.setBackground(new java.awt.Color(255, 255, 255));
         txtpassinicio.addActionListener(new java.awt.event.ActionListener() {
@@ -90,10 +86,10 @@ public class IU_AccederSistema extends javax.swing.JFrame {
                 txtpassinicioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtpassinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 200, 30));
+        getContentPane().add(txtpassinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 200, 30));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/iniciosesionfondo7.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 440, 460));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 440, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -164,7 +160,6 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFondo;
-    private javax.swing.JLabel jLabelIcono;
     private javax.swing.JPasswordField txtpassinicio;
     private javax.swing.JTextField txtusuarioinicio;
     // End of variables declaration//GEN-END:variables
