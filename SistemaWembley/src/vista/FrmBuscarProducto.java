@@ -7,13 +7,14 @@ import vista.FrmRegistrarVenta;
 public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
     Control_Productos conectar;
-   
+
     String sql;
     String idu;
+
     public FrmBuscarProducto() {
         initComponents();
-        conectar=new Control_Productos();
-      
+        conectar = new Control_Productos();
+
     }
 
     /**
@@ -217,55 +218,51 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
     private void btn_Buscarproducto_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Buscarproducto_ActionPerformed
         conectar.conectar();
-          
+
         String id;
         String nom;
-       String des;
-       String pre;
-       String can;
-      
-           sql="select * from productos where nombre_p = "+"'"+txtbuscarproducto.getText()+"'" ;
-          
-      String dato[]=conectar.consultar(sql);
-          id=dato[0];
-          nom=dato[1];
-          des=dato[2];
-          pre=dato[3];
-          can=dato[4];
-          txtnombreproducto.setText(nom);
-          txtdescripcion.setText(des);
-          txtprecioproducto.setText(pre);
-          txtcantidadproducto.setText(can);
-          txtid.setText(id);
-        System.out.println("sql="+sql);
-        idu=id;
+        String des;
+        String pre;
+        String can;
+
+        sql = "select * from productos where nombre_p = " + "'" + txtbuscarproducto.getText() + "'";
+
+        String dato[] = conectar.consultar(sql);
+        id = dato[0];
+        nom = dato[1];
+        des = dato[2];
+        pre = dato[3];
+        can = dato[4];
+        txtnombreproducto.setText(nom);
+        txtdescripcion.setText(des);
+        txtprecioproducto.setText(pre);
+        txtcantidadproducto.setText(can);
+        txtid.setText(id);
+        System.out.println("sql=" + sql);
+        idu = id;
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
     private void btn_RegistrarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarVenta_ActionPerformed
-        IU_Productos win1 = new IU_Productos();
+        
+        dispose();
+       
         FrmRegistrarVenta win2 = new FrmRegistrarVenta();
         win2.show();
-        win2.setVisible(true);
-        win1.add(win2);
-        win2.show();
         
-                //win2.show();
-                //       FrmRegistrarVenta IU_RegistrarVenta = new FrmRegistrarVenta();
-                //       
-                //        IU_RegistrarVenta.show();
+        win2.setVisible(true);
+     
     }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-      
-        
-        sql="update productos set nombre_p= '"+txtnombreproducto.getText()+"',descripcion='"+txtdescripcion.getText()+"',precio='"+
-       txtprecioproducto.getText()+"',cantidad='"+
-       txtcantidadproducto.getText()+"'where id_producto="+"'"+txtid.getText()+"'";
-       conectar.modificar(sql);
-       
-        System.out.println("sql="+sql);
-        
-       
+
+        sql = "update productos set nombre_p= '" + txtnombreproducto.getText() + "',descripcion='" + txtdescripcion.getText() + "',precio='"
+                + txtprecioproducto.getText() + "',cantidad='"
+                + txtcantidadproducto.getText() + "'where id_producto=" + "'" + txtid.getText() + "'";
+        conectar.modificar(sql);
+
+        System.out.println("sql=" + sql);
+
+
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void txtdescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdescripcionActionPerformed
@@ -273,10 +270,10 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtdescripcionActionPerformed
 
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-         conectar.conectar();      
-        sql="delete from productos where id_producto="+"'"+txtid.getText()+"'";
+        conectar.conectar();
+        sql = "delete from productos where id_producto=" + "'" + txtid.getText() + "'";
         conectar.eliminar(sql);
-       
+
     }//GEN-LAST:event_btneliminarActionPerformed
 
 
