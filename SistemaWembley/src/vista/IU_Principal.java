@@ -133,7 +133,7 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Usr.add(Pta_Registrar_Venta_usr);
 
         Pta_Registrar_reserva_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/calendario.png"))); // NOI18N
-        Pta_Registrar_reserva_.setText("Registrar reserva");
+        Pta_Registrar_reserva_.setText("Reserva");
         Pta_Registrar_reserva_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pta_Registrar_reserva_ActionPerformed(evt);
@@ -192,7 +192,9 @@ public class IU_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Pta_Ventas_ActionPerformed
 
     private void Pta_Registrar_reserva_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_reserva_ActionPerformed
-        // TODO add your handling code here:
+      FrmRegistrarReserva re=new FrmRegistrarReserva ();
+      Desk_IU_Principal.add(re);
+      re.show();
     }//GEN-LAST:event_Pta_Registrar_reserva_ActionPerformed
     public void comprobarusuario(String tipo) {
 

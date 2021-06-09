@@ -6,6 +6,7 @@
 package vista;
 
 import control.Control_Productos;
+import control.Control_Reservas;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,11 +15,11 @@ import javax.swing.JOptionPane;
  */
 public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
 
-    Control_Productos conectar;
+    Control_Reservas conectar;
     String sql;
     public FrmRegistrarReserva() {
         initComponents();
-        conectar=new Control_Productos();
+        conectar=new Control_Reservas();
     }
 
    
@@ -42,8 +43,10 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
         txtid = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        txt_fechareserva1 = new javax.swing.JTextField();
+        txthora = new javax.swing.JTextField();
         txtbuscar = new javax.swing.JTextField();
+        btn_Cancelar_Reserva_1 = new javax.swing.JButton();
+        btn_Cancelar_Reserva_2 = new javax.swing.JButton();
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Registrar reserva");
@@ -111,16 +114,34 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Hora reserva");
 
-        txt_fechareserva1.setText("HH-MM");
-        txt_fechareserva1.addActionListener(new java.awt.event.ActionListener() {
+        txthora.setText("HH-MM");
+        txthora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_fechareserva1ActionPerformed(evt);
+                txthoraActionPerformed(evt);
             }
         });
 
         txtbuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtbuscarActionPerformed(evt);
+            }
+        });
+
+        btn_Cancelar_Reserva_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Cancelar_Reserva_1.setText("Editar");
+        btn_Cancelar_Reserva_1.setToolTipText("Registrar Usuario");
+        btn_Cancelar_Reserva_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Cancelar_Reserva_1ActionPerformed(evt);
+            }
+        });
+
+        btn_Cancelar_Reserva_2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Cancelar_Reserva_2.setText("Eliminar");
+        btn_Cancelar_Reserva_2.setToolTipText("Registrar Usuario");
+        btn_Cancelar_Reserva_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Cancelar_Reserva_2ActionPerformed(evt);
             }
         });
 
@@ -133,33 +154,6 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel14)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txt_fechareserva1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel8)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(27, 27, 27)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel6)
-                                            .addComponent(txt_fechareserva, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btn_Buscarproducto_))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(115, 115, 115)
-                                        .addComponent(jLabel3))))
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,13 +162,46 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtnombrec)
-                                    .addComponent(txtdocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(txtdocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel14)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txthora, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel1)
+                                            .addGap(27, 27, 27)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel6)
+                                                .addComponent(txt_fechareserva, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jLabel8)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(180, 180, 180)))
+                                    .addComponent(jLabel13))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(115, 115, 115)
+                                        .addComponent(jLabel3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(32, 32, 32)
+                                        .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_Buscarproducto_))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(139, 139, 139)
+                                        .addComponent(btn_Cancelar_Reserva_1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btn_Cancelar_Reserva_2))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addComponent(btn_Guardar_reserva)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_Cancelar_Reserva_)))
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,9 +230,12 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
-                    .addComponent(txt_fechareserva1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel13)
+                    .addComponent(txthora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(btn_Cancelar_Reserva_1)
+                    .addComponent(btn_Cancelar_Reserva_2))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -221,7 +251,7 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Guardar_reserva)
                     .addComponent(btn_Cancelar_Reserva_))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         pack();
@@ -234,26 +264,30 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
     private void btn_Buscarproducto_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Buscarproducto_ActionPerformed
         conectar.conectar();
 
-        String id;
+        String  id;
+        String fecha;
+        String hora;
         String nom;
-        String des;
-        String pre;
-        String can;
+        String doc;
+        
+       // int buscar=Integer.parseInt(txtbuscar.getText() );
+        
 
-        sql = "select * from productos where nombre_p = " + "'" + txt_fechareserva.getText() + "'";
+        sql ="select * from reservas where documento =" + "'" +txtbuscar.getText()+ "'";
 
         String dato[] = conectar.consultar(sql);
         id = dato[0];
-        nom = dato[1];
-        des = dato[2];
-        pre = dato[3];
-        can = dato[4];
-        txtnombrep.setText(nom);
-        txtdescripcion.setText(des);
-        txtprecio.setText(pre);
-       // txtcantidad.setText(can);
+        fecha = dato[1];
+        hora= dato[2];
+        nom= dato[3];
+        doc= dato[4];
         txtid.setText(id);
-        System.out.println("sql=" + sql);
+        txt_fechareserva.setText(fecha);
+        txthora.setText(hora);
+        txtnombrec.setText(nom);
+        txtdocumento.setText(doc);
+        
+    
         
       
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
@@ -261,12 +295,9 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
     private void btn_Guardar_reservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Guardar_reservaActionPerformed
          
             conectar.conectar();
-     int pre=Integer.parseInt(txtprecio.getText());
-     int can=Integer.parseInt(txtcantidad.getText());
-     int total=Integer.parseInt(txttotalventa.getText());
-     int doc=Integer.parseInt(txtdocumento.getText());
-          sql="insert into ventas (nombre_p,precio,cantidad,total,nombre_c,documento_c)values('"+txtnombrep.getText()+"','"+pre+
-                  "','"+can+"','"+total+"','"+txtnombrec.getText()+"','"+doc+"')";
+           String fecha=txt_fechareserva.getText();
+           String hora=txthora.getText();
+          sql="insert into reservas (fecha,hora,nombre,documento)values('"+fecha+ "','"+hora+"','"+txtnombrec.getText()+"','"+txtdocumento.getText()+"')";
           conectar.agregarproducto(sql);
       
               
@@ -283,18 +314,37 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtidActionPerformed
 
-    private void txt_fechareserva1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fechareserva1ActionPerformed
+    private void txthoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txthoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_fechareserva1ActionPerformed
+    }//GEN-LAST:event_txthoraActionPerformed
 
     private void txtbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtbuscarActionPerformed
 
+    private void btn_Cancelar_Reserva_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Cancelar_Reserva_1ActionPerformed
+         String fecha=txt_fechareserva.getText();
+           String hora=txthora.getText(); 
+        sql="update reservas set fecha= '"+fecha+"',hora='"+hora+"',nombre='"+txtnombrec.getText()+"',documento='"+txtdocumento.getText()+"'where id_reserva="+"'"+txtid.getText()+"'";
+       conectar.modificar(sql);
+       
+        System.out.println("sql="+sql);
+    }//GEN-LAST:event_btn_Cancelar_Reserva_1ActionPerformed
+
+    private void btn_Cancelar_Reserva_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Cancelar_Reserva_2ActionPerformed
+
+          conectar.conectar();      
+        sql="delete from reservas where id_reserva="+"'"+txtid.getText()+"'";
+        conectar.eliminar(sql);
+        
+    }//GEN-LAST:event_btn_Cancelar_Reserva_2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
     private javax.swing.JButton btn_Cancelar_Reserva_;
+    private javax.swing.JButton btn_Cancelar_Reserva_1;
+    private javax.swing.JButton btn_Cancelar_Reserva_2;
     private javax.swing.JButton btn_Guardar_reserva;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
@@ -306,9 +356,9 @@ public class FrmRegistrarReserva extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField txt_fechareserva;
-    private javax.swing.JTextField txt_fechareserva1;
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtdocumento;
+    private javax.swing.JTextField txthora;
     private javax.swing.JTextField txtid;
     private javax.swing.JTextField txtnombrec;
     // End of variables declaration//GEN-END:variables
