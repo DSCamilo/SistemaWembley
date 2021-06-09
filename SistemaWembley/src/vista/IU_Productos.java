@@ -92,7 +92,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AgregarProductos_ActionPerformed
 
     private void AgregarProductos_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgregarProductos_MouseClicked
-        FrmAgregarProducto IUAgregarProducto = new FrmAgregarProducto();
+        IU_AgregarProducto_ IUAgregarProducto = new IU_AgregarProducto_();
         Desk_ModuloProductos.add(IUAgregarProducto);
         IUAgregarProducto.show();
     }//GEN-LAST:event_AgregarProductos_MouseClicked
@@ -101,9 +101,24 @@ public class IU_Productos extends javax.swing.JInternalFrame {
       FrmBuscarProducto IUBuscarProducto = new FrmBuscarProducto();
       Desk_ModuloProductos.add(IUBuscarProducto);
       IUBuscarProducto.show();
-      
+     
     }//GEN-LAST:event_BuscarProductos_MouseClicked
-
+   /* public void mostrareditar(){
+        
+       
+         FrmModificarProducto mp=new FrmModificarProducto();
+         Desk_ModuloProductos.add(mp);
+         mp.show();
+        
+       
+    }*/
+    public void comprobarusuario(String tipo){
+        System.out.println(tipo);
+    if (tipo.equals("Vendedor")) {
+          AgregarProductos_.setEnabled(false);
+    }
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu AgregarProductos_;
