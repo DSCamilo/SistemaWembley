@@ -39,7 +39,7 @@ public class IU_Principal extends javax.swing.JFrame {
         Pta_Proveedores = new javax.swing.JMenuItem();
         Menu_Prin_Usr = new javax.swing.JMenu();
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
-        Pta_Listar_Horarios_ = new javax.swing.JMenuItem();
+        Pta_Ventas_ = new javax.swing.JMenuItem();
         Pta_Registrar_Venta_usr = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -112,14 +112,14 @@ public class IU_Principal extends javax.swing.JFrame {
         });
         Menu_Prin_Usr.add(Pta_Productos_usr_);
 
-        Pta_Listar_Horarios_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/calendario.png"))); // NOI18N
-        Pta_Listar_Horarios_.setText("Inventario");
-        Pta_Listar_Horarios_.addActionListener(new java.awt.event.ActionListener() {
+        Pta_Ventas_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/ventas.png"))); // NOI18N
+        Pta_Ventas_.setText("Ventas");
+        Pta_Ventas_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pta_Listar_Horarios_ActionPerformed(evt);
+                Pta_Ventas_ActionPerformed(evt);
             }
         });
-        Menu_Prin_Usr.add(Pta_Listar_Horarios_);
+        Menu_Prin_Usr.add(Pta_Ventas_);
 
         Pta_Registrar_Venta_usr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/punto-de-venta.png"))); // NOI18N
         Pta_Registrar_Venta_usr.setText("Registrar venta");
@@ -174,9 +174,9 @@ public class IU_Principal extends javax.swing.JFrame {
     
     }//GEN-LAST:event_Pta_Registrar_Venta_usrActionPerformed
 
-    private void Pta_Listar_Horarios_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Listar_Horarios_ActionPerformed
+    private void Pta_Ventas_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Ventas_ActionPerformed
       
-    }//GEN-LAST:event_Pta_Listar_Horarios_ActionPerformed
+    }//GEN-LAST:event_Pta_Ventas_ActionPerformed
 public void comprobarusuario(String tipo){
   
     if (tipo.equals("Administrador")) {
@@ -231,12 +231,12 @@ public void comprobarusuario(String tipo){
     private javax.swing.JMenu Menu_Prin_Adm;
     private javax.swing.JMenu Menu_Prin_Usr;
     private javax.swing.JMenuItem Pta_Generar_Informes_;
-    private javax.swing.JMenuItem Pta_Listar_Horarios_;
     private javax.swing.JMenuItem Pta_Productos_adm_;
     private javax.swing.JMenuItem Pta_Productos_usr_;
     private javax.swing.JMenuItem Pta_Proveedores;
     private javax.swing.JMenuItem Pta_Registrar_Usuario_;
     private javax.swing.JMenuItem Pta_Registrar_Venta_usr;
+    private javax.swing.JMenuItem Pta_Ventas_;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
