@@ -40,6 +40,7 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Usr = new javax.swing.JMenu();
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
         Pta_Listar_Horarios_ = new javax.swing.JMenuItem();
+        Pta_Registrar_Venta_usr = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IU_Principal");
@@ -115,6 +116,15 @@ public class IU_Principal extends javax.swing.JFrame {
         Pta_Listar_Horarios_.setText("Listar Horarios");
         Menu_Prin_Usr.add(Pta_Listar_Horarios_);
 
+        Pta_Registrar_Venta_usr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/punto-de-venta.png"))); // NOI18N
+        Pta_Registrar_Venta_usr.setText("Registrar venta");
+        Pta_Registrar_Venta_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pta_Registrar_Venta_usrActionPerformed(evt);
+            }
+        });
+        Menu_Prin_Usr.add(Pta_Registrar_Venta_usr);
+
         jMenuBar1.add(Menu_Prin_Usr);
 
         setJMenuBar(jMenuBar1);
@@ -150,6 +160,14 @@ public class IU_Principal extends javax.swing.JFrame {
         Desk_IU_Principal.add(IU_Proveedores);
         IU_Proveedores.show();
     }//GEN-LAST:event_Pta_ProveedoresActionPerformed
+
+    private void Pta_Registrar_Venta_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Venta_usrActionPerformed
+        FrmRegistrarVenta IU_Registrar_Venta = new FrmRegistrarVenta();
+        Desk_IU_Principal.add(IU_Registrar_Venta);
+        IU_Registrar_Venta.show();
+        
+    
+    }//GEN-LAST:event_Pta_Registrar_Venta_usrActionPerformed
 public void comprobarusuario(String tipo){
   
     if (tipo.equals("Administrador")) {
@@ -209,6 +227,7 @@ public void comprobarusuario(String tipo){
     private javax.swing.JMenuItem Pta_Productos_usr_;
     private javax.swing.JMenuItem Pta_Proveedores;
     private javax.swing.JMenuItem Pta_Registrar_Usuario_;
+    private javax.swing.JMenuItem Pta_Registrar_Venta_usr;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

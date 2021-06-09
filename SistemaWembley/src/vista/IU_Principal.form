@@ -85,6 +85,17 @@
                 <Property name="text" type="java.lang.String" value="Listar Horarios"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="Pta_Registrar_Venta_usr">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/vista/Imagenes/punto-de-venta.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Registrar venta"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Pta_Registrar_Venta_usrActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
         </Menu>
       </SubComponents>
