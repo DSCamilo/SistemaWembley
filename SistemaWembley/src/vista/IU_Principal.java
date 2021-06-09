@@ -13,17 +13,18 @@ public class IU_Principal extends javax.swing.JFrame {
 
     public void Ventana() {
         //con esto obtienes en tamano en en x y y de tu monitor
-      
+
     }
 
     String tipous;
+
     public IU_Principal() {
         initComponents();
         dim = super.getToolkit().getScreenSize();
-       super.setSize(dim);
+        super.setSize(dim);
 //        super.setUndecorated(true);
         //super.setVisible(true);
-     
+
     }
 
     @SuppressWarnings("unchecked")
@@ -144,11 +145,11 @@ public class IU_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
 
     private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
-       
+
     }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
-     
+
         FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
         Desk_IU_Principal.add(IU_BuscarProducto);
         IU_BuscarProducto.show();
@@ -170,23 +171,25 @@ public class IU_Principal extends javax.swing.JFrame {
         FrmRegistrarVenta IU_Registrar_Venta = new FrmRegistrarVenta();
         Desk_IU_Principal.add(IU_Registrar_Venta);
         IU_Registrar_Venta.show();
-        
-    
+
+
     }//GEN-LAST:event_Pta_Registrar_Venta_usrActionPerformed
 
     private void Pta_Ventas_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Ventas_ActionPerformed
-      
+        IU_Ventas IU_Ventas = new IU_Ventas();
+        Desk_IU_Principal.add(IU_Ventas);
+        IU_Ventas.show();
     }//GEN-LAST:event_Pta_Ventas_ActionPerformed
-public void comprobarusuario(String tipo){
-  
-    if (tipo.equals("Administrador")) {
-          Menu_Prin_Usr.setEnabled(false);
-    }else{
-        Menu_Prin_Adm.setEnabled(false);
+    public void comprobarusuario(String tipo) {
+
+        if (tipo.equals("Administrador")) {
+            Menu_Prin_Usr.setEnabled(false);
+        } else {
+            Menu_Prin_Adm.setEnabled(false);
+        }
+
     }
-     
-}
-    
+
     /**
      * @param args the command line arguments
      */
