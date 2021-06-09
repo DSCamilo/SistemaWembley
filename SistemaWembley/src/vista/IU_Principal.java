@@ -42,6 +42,7 @@ public class IU_Principal extends javax.swing.JFrame {
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
         Pta_Ventas_ = new javax.swing.JMenuItem();
         Pta_Registrar_Venta_usr = new javax.swing.JMenuItem();
+        Pta_Registrar_reserva_ = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IU_Principal");
@@ -131,6 +132,15 @@ public class IU_Principal extends javax.swing.JFrame {
         });
         Menu_Prin_Usr.add(Pta_Registrar_Venta_usr);
 
+        Pta_Registrar_reserva_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/calendario.png"))); // NOI18N
+        Pta_Registrar_reserva_.setText("Registrar reserva");
+        Pta_Registrar_reserva_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pta_Registrar_reserva_ActionPerformed(evt);
+            }
+        });
+        Menu_Prin_Usr.add(Pta_Registrar_reserva_);
+
         jMenuBar1.add(Menu_Prin_Usr);
 
         setJMenuBar(jMenuBar1);
@@ -180,6 +190,10 @@ public class IU_Principal extends javax.swing.JFrame {
         Desk_IU_Principal.add(IU_Ventas);
         IU_Ventas.show();
     }//GEN-LAST:event_Pta_Ventas_ActionPerformed
+
+    private void Pta_Registrar_reserva_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_reserva_ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pta_Registrar_reserva_ActionPerformed
     public void comprobarusuario(String tipo) {
 
         if (tipo.equals("Administrador")) {
@@ -239,6 +253,7 @@ public class IU_Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem Pta_Proveedores;
     private javax.swing.JMenuItem Pta_Registrar_Usuario_;
     private javax.swing.JMenuItem Pta_Registrar_Venta_usr;
+    private javax.swing.JMenuItem Pta_Registrar_reserva_;
     private javax.swing.JMenuItem Pta_Ventas_;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
