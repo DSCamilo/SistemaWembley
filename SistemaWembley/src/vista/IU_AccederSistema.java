@@ -1,4 +1,3 @@
-
 package vista;
 
 import control.Control_Usuario;
@@ -6,26 +5,24 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
-
 public class IU_AccederSistema extends javax.swing.JFrame {
-        
-  // PaginaPrincipal abrirVentana = new PaginaPrincipal();
-   
-     Control_Usuario conectar;
-     String sql;
+
+    // PaginaPrincipal abrirVentana = new PaginaPrincipal();
+    Control_Usuario conectar;
+    String sql;
+
     public IU_AccederSistema() {
         initComponents();
-        conectar=new Control_Usuario();
+        conectar = new Control_Usuario();
         this.setLocationRelativeTo(null); //Ubicar JFrame en el centro de nuestra pantalla
         //abrirVentana.show();
     }
-    
-     public Image getIconImage() {
+
+    public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("vista/Imagenes/icono.png"));
         return retValue;
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -93,7 +90,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtpassinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassinicioActionPerformed
@@ -101,20 +98,20 @@ public class IU_AccederSistema extends javax.swing.JFrame {
     }//GEN-LAST:event_txtpassinicioActionPerformed
 
     private void btniniciarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btniniciarsesionActionPerformed
-          String pass=String.valueOf(txtpassinicio.getPassword());
-        if (pass.isEmpty()|| txtusuarioinicio.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null,"No se puede continuar. Hay celdas vacias" );
-        }else{
-             conectar.conectar();
-       
-          sql="select *  from usuarios where usuario='"+txtusuarioinicio.getText()+"' and password='"+pass+"'";
-           conectar.conectar();
-            String dato[]=conectar.consultar(sql);
-          String tipo=dato[1];
-          conectar.iniciarsesion(sql,tipo);
-     
+        String pass = String.valueOf(txtpassinicio.getPassword());
+        if (pass.isEmpty() || txtusuarioinicio.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No se puede continuar. Hay celdas vacias");
+        } else {
+            conectar.conectar();
+
+            sql = "select *  from usuarios where usuario='" + txtusuarioinicio.getText() + "' and password='" + pass + "'";
+            conectar.conectar();
+            String dato[] = conectar.consultar(sql);
+            String tipo = dato[1];
+            conectar.iniciarsesion(sql, tipo);
+
         }
-       
+
     }//GEN-LAST:event_btniniciarsesionActionPerformed
 
     /**
