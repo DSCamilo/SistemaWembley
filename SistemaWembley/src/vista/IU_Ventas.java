@@ -45,6 +45,7 @@ public class IU_Ventas extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btneditar = new javax.swing.JButton();
 
+        setClosable(true);
         setTitle("Ventas");
         setToolTipText("");
         addMouseListener(new java.awt.event.MouseAdapter() {
