@@ -7,10 +7,9 @@ import javax.swing.JFrame;
 public class IU_Proveedores extends javax.swing.JInternalFrame {
 
     public Dimension dim;
-
-    /**
-     * Creates new form IU_Productos
-     */
+      IU_AgregarProveedor IUAgregarProveedor ;
+      IU_ConsultarProveedor IU_ConsultarProveedor;
+    
     public IU_Proveedores() {
         initComponents();
 
@@ -18,6 +17,8 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
         super.setSize(dim);
 //        super.setUndecorated(true);
         super.setVisible(true);
+         IUAgregarProveedor = new IU_AgregarProveedor();
+          IU_ConsultarProveedor = new IU_ConsultarProveedor();
     }
 
     /**
@@ -85,9 +86,10 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
 
     private void AgregarProveedor_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgregarProveedor_MouseClicked
 
-        //   Desk_ModuloProveedores.removeAll();
-        //  Desk_ModuloProveedores.revalidate();
-        IU_AgregarProveedor IUAgregarProveedor = new IU_AgregarProveedor();
+        Desk_ModuloProveedores.removeAll();
+        Desk_ModuloProveedores.setVisible(false);
+         Desk_ModuloProveedores.setVisible(true);
+       
         Desk_ModuloProveedores.add(IUAgregarProveedor);
         IUAgregarProveedor.show();
 
@@ -95,9 +97,10 @@ public class IU_Proveedores extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AgregarProveedor_MouseClicked
 
     private void BuscarProveedor_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarProveedor_MouseClicked
-//       Desk_ModuloProveedores.removeAll();
-        //     Desk_ModuloProveedores.revalidate();
-        IU_ConsultarProveedor IU_ConsultarProveedor = new IU_ConsultarProveedor();
+          Desk_ModuloProveedores.removeAll();
+        Desk_ModuloProveedores.setVisible(false);
+         Desk_ModuloProveedores.setVisible(true);
+     
         Desk_ModuloProveedores.add(IU_ConsultarProveedor);
         IU_ConsultarProveedor.show();
 
