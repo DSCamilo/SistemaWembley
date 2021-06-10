@@ -38,7 +38,6 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Adm = new javax.swing.JMenu();
         Pta_Registrar_Usuario_ = new javax.swing.JMenuItem();
         Pta_Productos_adm_ = new javax.swing.JMenuItem();
-        Pta_Generar_Informes_ = new javax.swing.JMenuItem();
         Pta_Proveedores = new javax.swing.JMenuItem();
         Menu_Prin_Usr = new javax.swing.JMenu();
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
@@ -82,15 +81,6 @@ public class IU_Principal extends javax.swing.JFrame {
         });
         Menu_Prin_Adm.add(Pta_Productos_adm_);
 
-        Pta_Generar_Informes_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/generarinformes.png"))); // NOI18N
-        Pta_Generar_Informes_.setText("Generar informes");
-        Pta_Generar_Informes_.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pta_Generar_Informes_ActionPerformed(evt);
-            }
-        });
-        Menu_Prin_Adm.add(Pta_Generar_Informes_);
-
         Pta_Proveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/proveedores.png"))); // NOI18N
         Pta_Proveedores.setText("Proveedores");
         Pta_Proveedores.addActionListener(new java.awt.event.ActionListener() {
@@ -130,10 +120,6 @@ public class IU_Principal extends javax.swing.JFrame {
         Desk_IU_Principal.add(opcionesModProductos);
         opcionesModProductos.show();
     }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
-
-    private void Pta_Generar_Informes_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Generar_Informes_ActionPerformed
-       
-    }//GEN-LAST:event_Pta_Generar_Informes_ActionPerformed
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
      
@@ -206,7 +192,6 @@ public void comprobarusuario(String tipo){
     private javax.swing.JDesktopPane Desk_IU_Principal;
     private javax.swing.JMenu Menu_Prin_Adm;
     private javax.swing.JMenu Menu_Prin_Usr;
-    private javax.swing.JMenuItem Pta_Generar_Informes_;
     private javax.swing.JMenuItem Pta_Listar_Horarios_;
     private javax.swing.JMenuItem Pta_Productos_adm_;
     private javax.swing.JMenuItem Pta_Productos_usr_;

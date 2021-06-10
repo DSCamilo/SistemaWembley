@@ -41,6 +41,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         AgregarProductos_ = new javax.swing.JMenu();
         BuscarProductos_ = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
 
         setClosable(true);
         setTitle("Modulo Productos");
@@ -82,6 +83,14 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         });
         jMenuBar1.add(BuscarProductos_);
 
+        jMenu1.setText("Editar producto");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -103,6 +112,12 @@ public class IU_Productos extends javax.swing.JInternalFrame {
       IUBuscarProducto.show();
      
     }//GEN-LAST:event_BuscarProductos_MouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+          IU_EditarProductos IUEditarProducto = new  IU_EditarProductos();
+      Desk_ModuloProductos.add(IUEditarProducto);
+      IUEditarProducto.show();
+    }//GEN-LAST:event_jMenu1MouseClicked
    /* public void mostrareditar(){
         
        
@@ -124,6 +139,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
     private javax.swing.JMenu AgregarProductos_;
     private javax.swing.JMenu BuscarProductos_;
     private javax.swing.JDesktopPane Desk_ModuloProductos;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

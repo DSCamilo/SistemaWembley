@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package vista;
 
 import control.Control_Usuario;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Usuario
- */
+
 public class IU_Usuario extends javax.swing.JInternalFrame {
 
    Control_Usuario conectar;
@@ -19,8 +12,12 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
     public IU_Usuario() {
      
         initComponents();
-         setTitle("Usuarios");
+       
         conectar=new Control_Usuario();
+        
+        Grupobotones.add(tipoadmin);
+        Grupobotones.add(tipovendedor);
+        Grupobotones.setSelected(tipovendedor.getModel(), true);
        
     }
 
@@ -33,7 +30,7 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        Grupobotones = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -42,20 +39,13 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
         txtcontraseñaregistro = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         btn_RegistrarUsuario_ = new javax.swing.JButton();
-        btn_CancelarRegistroUsuario_ = new javax.swing.JButton();
-        tipousuario = new javax.swing.JRadioButton();
-        txtbuscar = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        btnreditar = new javax.swing.JButton();
-        btneliminar = new javax.swing.JButton();
-        txtususarioresultado = new javax.swing.JTextField();
-        txtcontraseñaresultado = new javax.swing.JTextField();
-        txttiporesultado = new javax.swing.JTextField();
+        tipoadmin = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtid = new javax.swing.JTextField();
+        tipovendedor = new javax.swing.JRadioButton();
 
-        setTitle("Registrar Usuario");
+        setBorder(null);
+        setClosable(true);
+        setResizable(true);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -87,100 +77,41 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
             }
         });
 
-        btn_CancelarRegistroUsuario_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_CancelarRegistroUsuario_.setText("Cancelar");
-        btn_CancelarRegistroUsuario_.setToolTipText("Canclar Registro");
-        btn_CancelarRegistroUsuario_.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_CancelarRegistroUsuario_ActionPerformed(evt);
-            }
-        });
-
-        tipousuario.setText("Administrador");
-
-        jButton1.setText("Buscar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        btnreditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnreditar.setText("Editar");
-        btnreditar.setToolTipText("Registrar Usuario");
-        btnreditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnreditarActionPerformed(evt);
-            }
-        });
-
-        btneliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btneliminar.setText("Eliminar");
-        btneliminar.setToolTipText("Registrar Usuario");
-        btneliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btneliminarActionPerformed(evt);
-            }
-        });
+        tipoadmin.setText("Administrador");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Tipo");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("ID");
+        tipovendedor.setText("Vendedor");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
-                                .addGap(118, 118, 118)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton1))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtusuarioregistro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel4))
-                                        .addGap(28, 28, 28)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tipousuario)))
-                                    .addComponent(btn_RegistrarUsuario_, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(36, 36, 36)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtususarioresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtcontraseñaresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txttiporesultado, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(btnreditar)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btneliminar)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_CancelarRegistroUsuario_)))
-                .addGap(32, 32, 32))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)
+                        .addGap(134, 134, 134))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtusuarioregistro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel4))
+                            .addGap(28, 28, 28)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tipoadmin)
+                                .addComponent(tipovendedor)))
+                        .addComponent(btn_RegistrarUsuario_, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addContainerGap(348, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,40 +122,24 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel6))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))))
-                .addGap(35, 35, 35)
+                        .addComponent(jLabel6)))
+                .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtusuarioregistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtususarioresultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtcontraseñaresultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(tipousuario)
-                        .addComponent(jLabel4))
-                    .addComponent(txttiporesultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                    .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_RegistrarUsuario_)
-                    .addComponent(btnreditar)
-                    .addComponent(btneliminar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(btn_CancelarRegistroUsuario_)
-                .addGap(15, 15, 15))
+                    .addComponent(tipoadmin)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tipovendedor)
+                .addGap(11, 11, 11)
+                .addComponent(btn_RegistrarUsuario_)
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -239,7 +154,7 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
         }else{
                conectar.conectar();
         String tipo="Vendedor";
-        if ( tipousuario.isSelected()) {
+        if ( tipoadmin.isSelected()) {
             tipo="Administrador";
         }
        
@@ -251,85 +166,23 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
      
     }//GEN-LAST:event_btn_RegistrarUsuario_ActionPerformed
 
-    private void btn_CancelarRegistroUsuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelarRegistroUsuario_ActionPerformed
-    dispose();
-    }//GEN-LAST:event_btn_CancelarRegistroUsuario_ActionPerformed
-
     private void txtcontraseñaregistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontraseñaregistroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcontraseñaregistroActionPerformed
 
-    private void btnreditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreditarActionPerformed
-          sql="update usuarios set usuario= '"+txtususarioresultado.getText()+"',password='"+txtcontraseñaresultado.getText()+"',tipo='"+
-       txttiporesultado.getText()+"'where id_usuario="+"'"+txtid.getText()+"'";
-       conectar.modificar(sql);
-       
-        System.out.println("sql="+sql);
-        
-        
-    }//GEN-LAST:event_btnreditarActionPerformed
-
-    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-       conectar.conectar();      
-        sql="delete from usuarios where usuario="+"'"+txtususarioresultado.getText()+"'";
-        conectar.eliminar(sql);
-        
-    }//GEN-LAST:event_btneliminarActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        conectar.conectar();
-        String pass=String.valueOf(txtcontraseñaregistro.getPassword());
-        String tipo;
-        String us;
-        String con;
-        String id;
-     
-        
-        if (txtbuscar.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Nose puede continuar. Hay cacillas vacias");
-        }else{
-            
-          sql="select * from usuarios where usuario ="+"'"+txtbuscar.getText()+"'" ;
-          
-      String dato[]=conectar.consultar(sql);
-        id=dato[0]; 
-        tipo=dato[1];
-          us=dato[2];
-          con=dato[3];
-        
-          txtususarioresultado.setText(us);
-          txtcontraseñaresultado.setText(con);
-          txttiporesultado.setText(tipo);
-          txtid.setText(id);
-          
-        System.out.println("sql="+sql);
-
- }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_CancelarRegistroUsuario_;
-    private javax.swing.JButton btn_RegistrarUsuario_;
-    private javax.swing.JButton btneliminar;
-    private javax.swing.JButton btnreditar;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton tipousuario;
-    private javax.swing.JTextField txtbuscar;
-    private javax.swing.JPasswordField txtcontraseñaregistro;
-    private javax.swing.JTextField txtcontraseñaresultado;
-    private javax.swing.JTextField txtid;
-    private javax.swing.JTextField txttiporesultado;
-    private javax.swing.JTextField txtusuarioregistro;
-    private javax.swing.JTextField txtususarioresultado;
+    javax.swing.ButtonGroup Grupobotones;
+    javax.swing.JButton btn_RegistrarUsuario_;
+    javax.swing.JLabel jLabel1;
+    javax.swing.JLabel jLabel2;
+    javax.swing.JLabel jLabel3;
+    javax.swing.JLabel jLabel4;
+    javax.swing.JLabel jLabel6;
+    javax.swing.JPanel jPanel1;
+    javax.swing.JRadioButton tipoadmin;
+    javax.swing.JRadioButton tipovendedor;
+    javax.swing.JPasswordField txtcontraseñaregistro;
+    javax.swing.JTextField txtusuarioregistro;
     // End of variables declaration//GEN-END:variables
 }

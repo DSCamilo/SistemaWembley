@@ -29,7 +29,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         btn_Buscarproducto_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btn_RegistrarVenta_ = new javax.swing.JButton();
         btneditar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtnombreproducto = new javax.swing.JTextField();
@@ -41,11 +40,10 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         txtcantidadproducto = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
-        btneliminar = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jToolBar1 = new javax.swing.JToolBar();
 
         setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
         setResizable(true);
 
         txtbuscarproducto.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +53,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Buscar producto");
+        jLabel6.setText("Ingrese nombre de producto");
 
         btn_Buscarproducto_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Buscarproducto_.setText("Buscar");
@@ -67,15 +65,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/buscar producto 64.png"))); // NOI18N
-
-        btn_RegistrarVenta_.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_RegistrarVenta_.setText("Registrar venta");
-        btn_RegistrarVenta_.setToolTipText("Registrar Usuario");
-        btn_RegistrarVenta_.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_RegistrarVenta_ActionPerformed(evt);
-            }
-        });
 
         btneditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btneditar.setText("Editar");
@@ -107,14 +96,12 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("ID");
 
-        btneliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btneliminar.setText("Eliminar");
-        btneliminar.setToolTipText("Registrar Usuario");
-        btneliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btneliminarActionPerformed(evt);
-            }
-        });
+        txtid.setEditable(false);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setText("Buscar producto");
+
+        jToolBar1.setRollover(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,29 +111,8 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_Buscarproducto_)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(36, 36, 36)
-                                .addComponent(jLabel1)
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(51, 51, 51))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(btn_RegistrarVenta_)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btneliminar)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(btneditar))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -162,29 +128,60 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(44, Short.MAX_VALUE))))
+                                    .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27)
+                                .addComponent(btn_Buscarproducto_)))
+                        .addGap(0, 415, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel9)))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel1)
+                                .addGap(50, 50, 50)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(btneditar)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37)
+                        .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Buscarproducto_))
-                .addGap(42, 42, 42)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtnombreproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -200,12 +197,9 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtprecioproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_RegistrarVenta_)
-                    .addComponent(btneditar)
-                    .addComponent(btneliminar))
-                .addGap(30, 30, 30))
+                .addGap(41, 41, 41)
+                .addComponent(btneditar)
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -241,20 +235,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         idu=id;
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
-    private void btn_RegistrarVenta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarVenta_ActionPerformed
-        IU_Productos win1 = new IU_Productos();
-        FrmRegistrarVenta win2 = new FrmRegistrarVenta();
-        win2.show();
-        win2.setVisible(true);
-        win1.add(win2);
-        win2.show();
-        
-                //win2.show();
-                //       FrmRegistrarVenta IU_RegistrarVenta = new FrmRegistrarVenta();
-                //       
-                //        IU_RegistrarVenta.show();
-    }//GEN-LAST:event_btn_RegistrarVenta_ActionPerformed
-
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
       
         
@@ -272,19 +252,10 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdescripcionActionPerformed
 
-    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-         conectar.conectar();      
-        sql="delete from productos where id_producto="+"'"+txtid.getText()+"'";
-        conectar.eliminar(sql);
-       
-    }//GEN-LAST:event_btneliminarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
-    private javax.swing.JButton btn_RegistrarVenta_;
     private javax.swing.JButton btneditar;
-    private javax.swing.JButton btneliminar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -292,6 +263,8 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JTextField txtbuscarproducto;
     private javax.swing.JTextField txtcantidadproducto;
     private javax.swing.JTextField txtdescripcion;
