@@ -11,14 +11,17 @@ public class IU_Principal extends javax.swing.JFrame {
 
     public Dimension dim;
 
-    public void Ventana() {
-        //con esto obtienes en tamano en en x y y de tu monitor
-      
-    }
-
+   IU_Productos opcionesModProductos ;
+   IU_Usuario IU_RegistrarUsuario ;
+   IU_Proveedores IU_Proveedores;
+     FrmBuscarProducto IU_BuscarProducto ;
     String tipous;
     public IU_Principal() {
         initComponents();
+         IU_BuscarProducto = new FrmBuscarProducto();
+         opcionesModProductos = new IU_Productos();
+       IU_RegistrarUsuario = new IU_Usuario();
+         IU_Proveedores = new IU_Proveedores();
         dim = super.getToolkit().getScreenSize();
        super.setSize(dim);
 //        super.setUndecorated(true);
@@ -36,9 +39,9 @@ public class IU_Principal extends javax.swing.JFrame {
         Desk_IU_Principal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         Menu_Prin_Adm = new javax.swing.JMenu();
-        Pta_Registrar_Usuario_ = new javax.swing.JMenuItem();
-        Pta_Productos_adm_ = new javax.swing.JMenuItem();
-        Pta_Proveedores = new javax.swing.JMenuItem();
+        Usuarios = new javax.swing.JMenuItem();
+        Productos = new javax.swing.JMenuItem();
+        Proveedores = new javax.swing.JMenuItem();
         Menu_Prin_Usr = new javax.swing.JMenu();
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
         Pta_Listar_Horarios_ = new javax.swing.JMenuItem();
@@ -63,32 +66,32 @@ public class IU_Principal extends javax.swing.JFrame {
         Menu_Prin_Adm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/administracion.png"))); // NOI18N
         Menu_Prin_Adm.setText("Administrador");
 
-        Pta_Registrar_Usuario_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/registrar usuario.png"))); // NOI18N
-        Pta_Registrar_Usuario_.setText("Usuarios");
-        Pta_Registrar_Usuario_.addActionListener(new java.awt.event.ActionListener() {
+        Usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/registrar usuario.png"))); // NOI18N
+        Usuarios.setText("Usuarios");
+        Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pta_Registrar_Usuario_ActionPerformed(evt);
+                UsuariosActionPerformed(evt);
             }
         });
-        Menu_Prin_Adm.add(Pta_Registrar_Usuario_);
+        Menu_Prin_Adm.add(Usuarios);
 
-        Pta_Productos_adm_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/productos.png"))); // NOI18N
-        Pta_Productos_adm_.setText("Productos");
-        Pta_Productos_adm_.addActionListener(new java.awt.event.ActionListener() {
+        Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/productos.png"))); // NOI18N
+        Productos.setText("Productos");
+        Productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pta_Productos_adm_ActionPerformed(evt);
+                ProductosActionPerformed(evt);
             }
         });
-        Menu_Prin_Adm.add(Pta_Productos_adm_);
+        Menu_Prin_Adm.add(Productos);
 
-        Pta_Proveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/proveedores.png"))); // NOI18N
-        Pta_Proveedores.setText("Proveedores");
-        Pta_Proveedores.addActionListener(new java.awt.event.ActionListener() {
+        Proveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/proveedores.png"))); // NOI18N
+        Proveedores.setText("Proveedores");
+        Proveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pta_ProveedoresActionPerformed(evt);
+                ProveedoresActionPerformed(evt);
             }
         });
-        Menu_Prin_Adm.add(Pta_Proveedores);
+        Menu_Prin_Adm.add(Proveedores);
 
         jMenuBar1.add(Menu_Prin_Adm);
 
@@ -115,30 +118,42 @@ public class IU_Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Pta_Productos_adm_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_adm_ActionPerformed
-        IU_Productos opcionesModProductos = new IU_Productos();
+    private void ProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductosActionPerformed
+       
+         Desk_IU_Principal.removeAll();
+         Desk_IU_Principal.setVisible(false);  
+         Desk_IU_Principal.setVisible(true);
+         
+        
         Desk_IU_Principal.add(opcionesModProductos);
         opcionesModProductos.show();
-    }//GEN-LAST:event_Pta_Productos_adm_ActionPerformed
+    }//GEN-LAST:event_ProductosActionPerformed
 
     private void Pta_Productos_usr_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Productos_usr_ActionPerformed
-     
-        FrmBuscarProducto IU_BuscarProducto = new FrmBuscarProducto();
+         Desk_IU_Principal.removeAll();
+         Desk_IU_Principal.setVisible(false);  
+         Desk_IU_Principal.setVisible(true);
+      
         Desk_IU_Principal.add(IU_BuscarProducto);
         IU_BuscarProducto.show();
     }//GEN-LAST:event_Pta_Productos_usr_ActionPerformed
 
-    private void Pta_Registrar_Usuario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_Registrar_Usuario_ActionPerformed
-        IU_Usuario IU_RegistrarUsuario = new IU_Usuario();
+    private void UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuariosActionPerformed
+       
+         Desk_IU_Principal.removeAll();
+         Desk_IU_Principal.setVisible(false);  
+         Desk_IU_Principal.setVisible(true);
         Desk_IU_Principal.add(IU_RegistrarUsuario);
         IU_RegistrarUsuario.setVisible(true);
-    }//GEN-LAST:event_Pta_Registrar_Usuario_ActionPerformed
+    }//GEN-LAST:event_UsuariosActionPerformed
 
-    private void Pta_ProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pta_ProveedoresActionPerformed
-        IU_Proveedores IU_Proveedores = new IU_Proveedores();
+    private void ProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveedoresActionPerformed
+        Desk_IU_Principal.removeAll();
+         Desk_IU_Principal.setVisible(false);  
+         Desk_IU_Principal.setVisible(true);
         Desk_IU_Principal.add(IU_Proveedores);
         IU_Proveedores.show();
-    }//GEN-LAST:event_Pta_ProveedoresActionPerformed
+    }//GEN-LAST:event_ProveedoresActionPerformed
 public void comprobarusuario(String tipo){
   
     if (tipo.equals("Administrador")) {
@@ -192,11 +207,11 @@ public void comprobarusuario(String tipo){
     private javax.swing.JDesktopPane Desk_IU_Principal;
     private javax.swing.JMenu Menu_Prin_Adm;
     private javax.swing.JMenu Menu_Prin_Usr;
+    private javax.swing.JMenuItem Productos;
+    private javax.swing.JMenuItem Proveedores;
     private javax.swing.JMenuItem Pta_Listar_Horarios_;
-    private javax.swing.JMenuItem Pta_Productos_adm_;
     private javax.swing.JMenuItem Pta_Productos_usr_;
-    private javax.swing.JMenuItem Pta_Proveedores;
-    private javax.swing.JMenuItem Pta_Registrar_Usuario_;
+    private javax.swing.JMenuItem Usuarios;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

@@ -29,7 +29,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         btn_Buscarproducto_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btneditar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtnombreproducto = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -65,15 +64,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/buscar producto 64.png"))); // NOI18N
-
-        btneditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btneditar.setText("Editar");
-        btneditar.setToolTipText("Registrar Usuario");
-        btneditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btneditarActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nombre producto:");
@@ -136,21 +126,16 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                         .addGap(0, 415, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(8, 8, 8)
-                                        .addComponent(jLabel9)))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel1)
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(btneditar)))
+                                .addGap(8, 8, 8)
+                                .addComponent(jLabel9)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,7 +158,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                                 .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel6)
@@ -197,9 +181,7 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtprecioproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(41, 41, 41)
-                .addComponent(btneditar)
-                .addGap(19, 19, 19))
+                .addGap(83, 83, 83))
         );
 
         pack();
@@ -235,19 +217,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
         idu=id;
     }//GEN-LAST:event_btn_Buscarproducto_ActionPerformed
 
-    private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-      
-        
-        sql="update productos set nombre_p= '"+txtnombreproducto.getText()+"',descripcion='"+txtdescripcion.getText()+"',precio='"+
-       txtprecioproducto.getText()+"',cantidad='"+
-       txtcantidadproducto.getText()+"'where id_producto="+"'"+txtid.getText()+"'";
-       conectar.modificar(sql);
-       
-        System.out.println("sql="+sql);
-        
-       
-    }//GEN-LAST:event_btneditarActionPerformed
-
     private void txtdescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdescripcionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdescripcionActionPerformed
@@ -255,7 +224,6 @@ public class FrmBuscarProducto extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
-    private javax.swing.JButton btneditar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

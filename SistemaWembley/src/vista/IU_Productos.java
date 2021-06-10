@@ -14,9 +14,11 @@ public class IU_Productos extends javax.swing.JInternalFrame {
 
   
     public Dimension dim;
-    /**
-     * Creates new form IU_Productos
-     */
+    
+     FrmBuscarProducto IUBuscarProducto;
+      IU_AgregarProducto_ IUAgregarProducto ;
+     IU_EditarProductos IUEditarProducto ;
+    
     public IU_Productos() {
         initComponents();
         
@@ -24,6 +26,13 @@ public class IU_Productos extends javax.swing.JInternalFrame {
        super.setSize(dim);
 //        super.setUndecorated(true);
         super.setVisible(true);
+        IUBuscarProducto = new FrmBuscarProducto();
+     
+        IUAgregarProducto = new IU_AgregarProducto_();
+       
+        IUEditarProducto = new  IU_EditarProductos();
+      
+        
     }
     
      
@@ -41,7 +50,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         AgregarProductos_ = new javax.swing.JMenu();
         BuscarProductos_ = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
+        jMenu_editar = new javax.swing.JMenu();
 
         setClosable(true);
         setTitle("Modulo Productos");
@@ -83,13 +92,13 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         });
         jMenuBar1.add(BuscarProductos_);
 
-        jMenu1.setText("Editar producto");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jMenu_editar.setText("Editar producto");
+        jMenu_editar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
+                jMenu_editarMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenu_editar);
 
         setJMenuBar(jMenuBar1);
 
@@ -101,32 +110,36 @@ public class IU_Productos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_AgregarProductos_ActionPerformed
 
     private void AgregarProductos_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AgregarProductos_MouseClicked
-        IU_AgregarProducto_ IUAgregarProducto = new IU_AgregarProducto_();
-        Desk_ModuloProductos.add(IUAgregarProducto);
-        IUAgregarProducto.show();
+      // Desk_ModuloProductos.revalidate();
+       
+     
+       
+        Desk_ModuloProductos.removeAll();
+     Desk_ModuloProductos.setVisible(false);
+      Desk_ModuloProductos.setVisible(true);
+     Desk_ModuloProductos.add(IUAgregarProducto);
+     IUAgregarProducto.show();
     }//GEN-LAST:event_AgregarProductos_MouseClicked
 
     private void BuscarProductos_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarProductos_MouseClicked
-      FrmBuscarProducto IUBuscarProducto = new FrmBuscarProducto();
-      Desk_ModuloProductos.add(IUBuscarProducto);
-      IUBuscarProducto.show();
-     
+   
+     Desk_ModuloProductos.removeAll();
+     Desk_ModuloProductos.setVisible(false);
+      Desk_ModuloProductos.setVisible(true);
+     Desk_ModuloProductos.add(IUBuscarProducto);
+     IUBuscarProducto.show();
     }//GEN-LAST:event_BuscarProductos_MouseClicked
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-          IU_EditarProductos IUEditarProducto = new  IU_EditarProductos();
+    private void jMenu_editarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu_editarMouseClicked
+   
+       
+         Desk_ModuloProductos.removeAll();
+       Desk_ModuloProductos.setVisible(false);
+      Desk_ModuloProductos.setVisible(true);
       Desk_ModuloProductos.add(IUEditarProducto);
-      IUEditarProducto.show();
-    }//GEN-LAST:event_jMenu1MouseClicked
-   /* public void mostrareditar(){
-        
-       
-         FrmModificarProducto mp=new FrmModificarProducto();
-         Desk_ModuloProductos.add(mp);
-         mp.show();
-        
-       
-    }*/
+       IUEditarProducto.show();
+    }//GEN-LAST:event_jMenu_editarMouseClicked
+  
     public void comprobarusuario(String tipo){
         System.out.println(tipo);
     if (tipo.equals("Vendedor")) {
@@ -139,7 +152,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
     private javax.swing.JMenu AgregarProductos_;
     private javax.swing.JMenu BuscarProductos_;
     private javax.swing.JDesktopPane Desk_ModuloProductos;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenu_editar;
     // End of variables declaration//GEN-END:variables
 }
