@@ -44,7 +44,6 @@ public class IU_Principal extends javax.swing.JFrame {
         Proveedores = new javax.swing.JMenuItem();
         Menu_Prin_Usr = new javax.swing.JMenu();
         Pta_Productos_usr_ = new javax.swing.JMenuItem();
-        Pta_Listar_Horarios_ = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IU_Principal");
@@ -106,10 +105,6 @@ public class IU_Principal extends javax.swing.JFrame {
             }
         });
         Menu_Prin_Usr.add(Pta_Productos_usr_);
-
-        Pta_Listar_Horarios_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/calendario.png"))); // NOI18N
-        Pta_Listar_Horarios_.setText("Listar Horarios");
-        Menu_Prin_Usr.add(Pta_Listar_Horarios_);
 
         jMenuBar1.add(Menu_Prin_Usr);
 
@@ -209,7 +204,6 @@ public void comprobarusuario(String tipo){
     private javax.swing.JMenu Menu_Prin_Usr;
     private javax.swing.JMenuItem Productos;
     private javax.swing.JMenuItem Proveedores;
-    private javax.swing.JMenuItem Pta_Listar_Horarios_;
     private javax.swing.JMenuItem Pta_Productos_usr_;
     private javax.swing.JMenuItem Usuarios;
     private javax.swing.JMenuBar jMenuBar1;

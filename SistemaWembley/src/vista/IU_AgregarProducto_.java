@@ -46,6 +46,7 @@ public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
         txtnombreproducto = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         txtdescripcion = new javax.swing.JTextField();
+        btn_agregarproducto_1 = new javax.swing.JButton();
 
         setResizable(true);
 
@@ -83,6 +84,15 @@ public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
             }
         });
 
+        btn_agregarproducto_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_agregarproducto_1.setText("Cancelar");
+        btn_agregarproducto_1.setToolTipText("Registrar Usuario");
+        btn_agregarproducto_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_agregarproducto_1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,7 +106,9 @@ public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(88, 88, 88)
-                        .addComponent(btn_agregarproducto_))
+                        .addComponent(btn_agregarproducto_)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_agregarproducto_1))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -143,7 +155,9 @@ public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5)
                     .addComponent(txtcantidadproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(btn_agregarproducto_)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_agregarproducto_)
+                    .addComponent(btn_agregarproducto_1))
                 .addContainerGap(50, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -179,9 +193,14 @@ public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdescripcionActionPerformed
 
+    private void btn_agregarproducto_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproducto_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_agregarproducto_1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_agregarproducto_;
+    private javax.swing.JButton btn_agregarproducto_1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

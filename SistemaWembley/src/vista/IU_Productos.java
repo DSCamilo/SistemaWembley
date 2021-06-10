@@ -92,6 +92,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         });
         jMenuBar1.add(BuscarProductos_);
 
+        jMenu_editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/EDITAR.png"))); // NOI18N
         jMenu_editar.setText("Editar producto");
         jMenu_editar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

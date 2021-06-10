@@ -46,6 +46,7 @@ public class IU_EditarProductos extends javax.swing.JInternalFrame {
         btneditar = new javax.swing.JButton();
         txtid = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        btneditar1 = new javax.swing.JButton();
 
         setBorder(null);
 
@@ -99,6 +100,15 @@ public class IU_EditarProductos extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("ID");
 
+        btneditar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btneditar1.setText("Cancelar");
+        btneditar1.setToolTipText("Registrar Usuario");
+        btneditar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btneditar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -125,7 +135,9 @@ public class IU_EditarProductos extends javax.swing.JInternalFrame {
                             .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(11, 11, 11)
-                        .addComponent(btneditar))
+                        .addComponent(btneditar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btneditar1))
                     .addComponent(jLabel6)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,7 +178,9 @@ public class IU_EditarProductos extends javax.swing.JInternalFrame {
                     .addComponent(txtprecioproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(41, 41, 41)
-                .addComponent(btneditar)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btneditar)
+                    .addComponent(btneditar1))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
 
@@ -229,10 +243,15 @@ public class IU_EditarProductos extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_btneditarActionPerformed
 
+    private void btneditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditar1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_btneditar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Buscarproducto_;
     private javax.swing.JButton btneditar;
+    private javax.swing.JButton btneditar1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
