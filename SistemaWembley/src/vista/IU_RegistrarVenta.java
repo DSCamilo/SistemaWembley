@@ -9,12 +9,12 @@ package vista;
  *
  * @author Usuario
  */
-public class FrmRegistrarVenta extends javax.swing.JInternalFrame {
+public class IU_RegistrarVenta extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form FrmRegistrarVenta
      */
-    public FrmRegistrarVenta() {
+    public IU_RegistrarVenta() {
         initComponents();
     }
 

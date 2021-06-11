@@ -14,11 +14,11 @@ public class IU_Principal extends javax.swing.JFrame {
    IU_Productos opcionesModProductos ;
    IU_Usuario IU_RegistrarUsuario ;
    IU_Proveedores IU_Proveedores;
-     FrmBuscarProducto IU_BuscarProducto ;
+     IU_BuscarProducto IU_BuscarProducto ;
     String tipous;
     public IU_Principal() {
         initComponents();
-         IU_BuscarProducto = new FrmBuscarProducto();
+         IU_BuscarProducto = new IU_BuscarProducto();
          opcionesModProductos = new IU_Productos();
        IU_RegistrarUsuario = new IU_Usuario();
          IU_Proveedores = new IU_Proveedores();

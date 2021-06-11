@@ -2,15 +2,15 @@ package vista;
 
 import control.Control_Productos;
 import vista.IU_Productos;
-import vista.FrmRegistrarVenta;
+import vista.IU_RegistrarVenta;
 
-public class FrmBuscarProducto extends javax.swing.JInternalFrame {
+public class IU_BuscarProducto extends javax.swing.JInternalFrame {
 
     Control_Productos conectar;
    
     String sql;
     String idu;
-    public FrmBuscarProducto() {
+    public IU_BuscarProducto() {
         initComponents();
         conectar=new Control_Productos();
       

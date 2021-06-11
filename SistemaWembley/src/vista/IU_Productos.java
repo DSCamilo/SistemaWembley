@@ -15,7 +15,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
   
     public Dimension dim;
     
-     FrmBuscarProducto IUBuscarProducto;
+     IU_BuscarProducto IUBuscarProducto;
       IU_AgregarProducto_ IUAgregarProducto ;
      IU_EditarProductos IUEditarProducto ;
     
@@ -26,7 +26,7 @@ public class IU_Productos extends javax.swing.JInternalFrame {
        super.setSize(dim);
 //        super.setUndecorated(true);
         super.setVisible(true);
-        IUBuscarProducto = new FrmBuscarProducto();
+        IUBuscarProducto = new IU_BuscarProducto();
      
         IUAgregarProducto = new IU_AgregarProducto_();
        
