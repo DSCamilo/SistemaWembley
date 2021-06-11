@@ -243,7 +243,7 @@ public class IU_RegistrarVenta extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_ConfirmarVenta_ActionPerformed
 
     private void btn_Cancelar_Venta_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Cancelar_Venta_ActionPerformed
-        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn_Cancelar_Venta_ActionPerformed
 
 

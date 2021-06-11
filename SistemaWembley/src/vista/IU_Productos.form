@@ -16,17 +16,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AgregarProductos_ActionPerformed"/>
           </Events>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="BuscarProductos_">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/vista/Imagenes/buscar produc mod pro.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Buscar productos"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscarProductos_MouseClicked"/>
-          </Events>
-        </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu_editar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">

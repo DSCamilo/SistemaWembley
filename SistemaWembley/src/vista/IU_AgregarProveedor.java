@@ -152,7 +152,7 @@ public class IU_AgregarProveedor extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btn_agregarproveedor_ActionPerformed
 
     private void btn_agregarproveedor_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproveedor_1ActionPerformed
-        // TODO add your handling code here:
+    dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn_agregarproveedor_1ActionPerformed
 
 

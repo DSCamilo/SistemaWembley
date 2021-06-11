@@ -194,7 +194,7 @@ public class IU_AgregarProducto_ extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtdescripcionActionPerformed
 
     private void btn_agregarproducto_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarproducto_1ActionPerformed
-        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn_agregarproducto_1ActionPerformed
 
 

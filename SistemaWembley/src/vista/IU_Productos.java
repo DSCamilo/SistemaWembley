@@ -49,7 +49,6 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         Desk_ModuloProductos = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         AgregarProductos_ = new javax.swing.JMenu();
-        BuscarProductos_ = new javax.swing.JMenu();
         jMenu_editar = new javax.swing.JMenu();
 
         setClosable(true);
@@ -83,15 +82,6 @@ public class IU_Productos extends javax.swing.JInternalFrame {
         });
         jMenuBar1.add(AgregarProductos_);
 
-        BuscarProductos_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/buscar produc mod pro.png"))); // NOI18N
-        BuscarProductos_.setText("Buscar productos");
-        BuscarProductos_.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BuscarProductos_MouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(BuscarProductos_);
-
         jMenu_editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/EDITAR.png"))); // NOI18N
         jMenu_editar.setText("Editar producto");
         jMenu_editar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -122,15 +112,6 @@ public class IU_Productos extends javax.swing.JInternalFrame {
      IUAgregarProducto.show();
     }//GEN-LAST:event_AgregarProductos_MouseClicked
 
-    private void BuscarProductos_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarProductos_MouseClicked
-   
-     Desk_ModuloProductos.removeAll();
-     Desk_ModuloProductos.setVisible(false);
-      Desk_ModuloProductos.setVisible(true);
-     Desk_ModuloProductos.add(IUBuscarProducto);
-     IUBuscarProducto.show();
-    }//GEN-LAST:event_BuscarProductos_MouseClicked
-
     private void jMenu_editarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu_editarMouseClicked
    
        
@@ -151,7 +132,6 @@ public class IU_Productos extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu AgregarProductos_;
-    private javax.swing.JMenu BuscarProductos_;
     private javax.swing.JDesktopPane Desk_ModuloProductos;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenu_editar;

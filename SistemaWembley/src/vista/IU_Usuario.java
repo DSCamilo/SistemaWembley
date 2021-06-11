@@ -42,6 +42,7 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
         tipoadmin = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
         tipovendedor = new javax.swing.JRadioButton();
+        btn_RegistrarUsuario_1 = new javax.swing.JButton();
 
         setBorder(null);
         setClosable(true);
@@ -84,6 +85,15 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
 
         tipovendedor.setText("Vendedor");
 
+        btn_RegistrarUsuario_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_RegistrarUsuario_1.setText("Cancelar");
+        btn_RegistrarUsuario_1.setToolTipText("Registrar Usuario");
+        btn_RegistrarUsuario_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_RegistrarUsuario_1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -110,7 +120,10 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
                                 .addComponent(txtcontraseñaregistro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(tipoadmin)
                                 .addComponent(tipovendedor)))
-                        .addComponent(btn_RegistrarUsuario_, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(btn_RegistrarUsuario_)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btn_RegistrarUsuario_1))))
                 .addContainerGap(348, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -138,7 +151,9 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tipovendedor)
                 .addGap(11, 11, 11)
-                .addComponent(btn_RegistrarUsuario_)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_RegistrarUsuario_)
+                    .addComponent(btn_RegistrarUsuario_1))
                 .addContainerGap(109, Short.MAX_VALUE))
         );
 
@@ -170,10 +185,15 @@ public class IU_Usuario extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcontraseñaregistroActionPerformed
 
+    private void btn_RegistrarUsuario_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarUsuario_1ActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_RegistrarUsuario_1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     javax.swing.ButtonGroup Grupobotones;
     javax.swing.JButton btn_RegistrarUsuario_;
+    javax.swing.JButton btn_RegistrarUsuario_1;
     javax.swing.JLabel jLabel1;
     javax.swing.JLabel jLabel2;
     javax.swing.JLabel jLabel3;

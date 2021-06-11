@@ -40,7 +40,6 @@ public class IU_BuscarProducto extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jToolBar1 = new javax.swing.JToolBar();
         btn_Buscarproducto_1 = new javax.swing.JButton();
 
         setClosable(true);
@@ -91,8 +90,6 @@ public class IU_BuscarProducto extends javax.swing.JInternalFrame {
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Buscar producto");
-
-        jToolBar1.setRollover(true);
 
         btn_Buscarproducto_1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Buscarproducto_1.setText("Cancelar");
@@ -149,18 +146,13 @@ public class IU_BuscarProducto extends javax.swing.JInternalFrame {
                             .addComponent(jLabel8)
                             .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
@@ -168,12 +160,13 @@ public class IU_BuscarProducto extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE))
+                        .addGap(0, 34, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel9)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addComponent(jLabel6)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtbuscarproducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Buscarproducto_)
@@ -235,7 +228,7 @@ public class IU_BuscarProducto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtdescripcionActionPerformed
 
     private void btn_Buscarproducto_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Buscarproducto_1ActionPerformed
-        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn_Buscarproducto_1ActionPerformed
 
 
@@ -250,7 +243,6 @@ public class IU_BuscarProducto extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JTextField txtbuscarproducto;
     private javax.swing.JTextField txtcantidadproducto;
     private javax.swing.JTextField txtdescripcion;
