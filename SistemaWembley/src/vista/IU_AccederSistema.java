@@ -71,6 +71,11 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         txtusuarioinicio.setBackground(new java.awt.Color(255, 255, 255));
         txtusuarioinicio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtusuarioinicio.setForeground(new java.awt.Color(204, 204, 204));
+        txtusuarioinicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusuarioinicioActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtusuarioinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 200, 30));
 
         btniniciarsesion.setBackground(new java.awt.Color(0, 204, 0));
@@ -122,6 +127,10 @@ public class IU_AccederSistema extends javax.swing.JFrame {
         }
        
     }//GEN-LAST:event_btniniciarsesionActionPerformed
+
+    private void txtusuarioinicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusuarioinicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtusuarioinicioActionPerformed
 
     /**
      * @param args the command line arguments

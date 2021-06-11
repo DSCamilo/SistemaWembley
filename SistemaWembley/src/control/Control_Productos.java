@@ -78,7 +78,7 @@ public void eliminar(String sql){
               int valor= sentencia.executeUpdate(sql);
               
               if (valor>0) {
-                   JOptionPane.showMessageDialog(null, "Eliminado ");
+                   JOptionPane.showMessageDialog(null, "Acción realizada ");
               }
               System.out.println("Valor = "+valor);
           } catch (SQLException ex) {
@@ -92,7 +92,7 @@ public void eliminar(String sql){
               int valor= sentencia.executeUpdate(sql);
               
               if (valor>0) {
-                   JOptionPane.showMessageDialog(null, "Modificado");
+                   JOptionPane.showMessageDialog(null, "Acción realizada");
               }
               System.out.println("Valor = "+valor);
           } catch (SQLException ex) {

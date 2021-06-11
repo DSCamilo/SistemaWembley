@@ -77,6 +77,8 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Nombre de proveedor a buscar");
 
+        txtxid.setEditable(false);
+
         btneditar.setText("Cancelar");
         btneditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +112,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtxid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtxid, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -164,7 +166,7 @@ public class IU_ConsultarProveedor extends javax.swing.JInternalFrame {
        String tele;
        String corr;
       
-           sql="select * from proveedores where nombre_e like "+"'%"+txtbuscar.getText()+"%'" ;
+           sql="select * from proveedores where nombre_e ="+"'"+txtbuscar.getText()+"'" ;
           
       String dato[]=conectar.consultar(sql);
         if (dato[0].isEmpty()) {
