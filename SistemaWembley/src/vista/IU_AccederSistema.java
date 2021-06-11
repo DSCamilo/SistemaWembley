@@ -53,7 +53,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 100, -1));
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/Imagenes/pelota-de-futbol.png"))); // NOI18N
         getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 140, 150));
@@ -86,7 +86,7 @@ public class IU_AccederSistema extends javax.swing.JFrame {
                 btniniciarsesionActionPerformed(evt);
             }
         });
-        getContentPane().add(btniniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
+        getContentPane().add(btniniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 90, -1));
 
         txtpassinicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
