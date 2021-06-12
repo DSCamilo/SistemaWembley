@@ -73,7 +73,7 @@
     <target name="-post-jar">
     <property name="store.jar.name" value="SistemaWembley"/>
  
-    <property name="store.dir" value="EjecutableFinal"/>
+    <property name="store.dir" value="EjecutableJar"/>
     <property name="store.jar" value="${store.dir}/${store.jar.name}.jar"/>
  
     <echo message="Packaging ${application.title} into a single JAR at ${store.jar}"/>
@@ -96,6 +96,5 @@
     <delete dir="${store.dir}/lib"/>
     <delete file="${store.dir}/README.TXT"/>
 </target>
-    
     
 </project>
